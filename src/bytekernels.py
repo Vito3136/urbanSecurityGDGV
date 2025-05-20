@@ -126,3 +126,15 @@ def divisible_index_kernel(data: BytesLike, mod: int) -> bytes:
 def compressed_spiral_kernel(data: BytesLike, block: int = 16) -> bytes:
     positions = {0, 1, block-2, block-1}
     return bytes(data[i] for i in range(len(data)) if (i % block) in positions)
+
+# ---------------------------------------------------------------------------
+# 6)  It takes the first and last third of the bytecode, discarding the middle third.
+# ---------------------------------------------------------------------------
+def tunnel_window_kernel(data: BytesLike) -> bytes:
+
+    length = len(data)
+    if length < 3:
+        return bytes(data)  # too short to divide into thirds
+
+    one_third = length // 3
+    return data[:one_third] + data[-one_third:]
