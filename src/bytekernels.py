@@ -3,7 +3,7 @@ from typing import Union, Callable, Dict, Iterable
 BytesLike = Union[bytes, bytearray]
 
 # ---------------------------------------------------------------------------
-# 1)  Variable pitch kernel
+# 1) Variable pitch kernel
 # ---------------------------------------------------------------------------
 def stride_kernel(data: BytesLike, keep: int, skip: int) -> bytes:
     """
@@ -22,7 +22,7 @@ def stride_kernel(data: BytesLike, keep: int, skip: int) -> bytes:
     return bytes(out)
 
 # ---------------------------------------------------------------------------
-# 2)  Kernel "prime positions": take only bytes in positions with index prime
+# 2) Kernel "prime positions": take only bytes in positions with index prime
 # ---------------------------------------------------------------------------
 def prime_index_kernel(data: BytesLike) -> bytes:
     def is_prime(n: int) -> bool:
@@ -42,7 +42,7 @@ def prime_index_kernel(data: BytesLike) -> bytes:
 
 
 # ---------------------------------------------------------------------------
-# 3)  Kernel "powers of n": This kernel selects bytes whose positions are successive powers of n within the sequence
+# 3) Kernel "powers of n": This kernel selects bytes whose positions are successive powers of n within the sequence
 # ---------------------------------------------------------------------------
 def power_of_n_kernel(data: BytesLike, n: int) -> bytes:
     if n <= 1:
@@ -56,18 +56,25 @@ def power_of_n_kernel(data: BytesLike, n: int) -> bytes:
 
 
 # ---------------------------------------------------------------------------
-# 4)  Kernel "checkerboard": divide i dati in blocchi (default da 8 byte). In ogni blocco tiene solo la prima metà
-#     Scarta la seconda metà. Il risultato è un flusso “a scacchiera” lineare, metà sì metà no
+# 4) "Checkerboard" Kernel: It divides the data into blocks (by default 8 bytes). 
+#    In each block, it keeps only the first half and discards the second half. The result is a linear "checkerboard" stream, alternating half kept, half discarded.
 # ---------------------------------------------------------------------------
 def checkerboard_kernel(data: BytesLike, block_size: int = 8) -> bytes:
+    # Check for the type of data
+    if not isinstance(block_size, int) or block_size <= 0:   
+        raise ValueError("block_size must be a positive integer greater than 0")
     return bytes(b for i, b in enumerate(data) if (i % block_size) < block_size // 2)
 
 
 # ---------------------------------------------------------------------------
-# 5)  Kernel "fibonacci filter": tieni i byte in posizioni della sequenza di Fibonacci
-#     I primi 25 termini sono: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,144, 233, 377, 610, 987,1597, 2584, 4181, 6765,10946, 17711, 28657, 46368, 75025
+# 5) "Fibonacci filter" Kernel: Keep the bytes in positions corresponding to the Fibonacci sequence.
+#    The first 25 terms are: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025.
 # ---------------------------------------------------------------------------
 def fibonacci_index_kernel(data: BytesLike) -> bytes:
+    # Check for the type of data
+    if not hasattr(data, "__getitem__") or not hasattr(data, "__len__"): 
+        raise TypeError("data must be a sequence type supporting indexing and length")
+
     fibs = set()
     a, b = 0, 1
     while a < len(data):
@@ -75,66 +82,95 @@ def fibonacci_index_kernel(data: BytesLike) -> bytes:
         a, b = b, a + b
     return bytes(data[i] for i in range(len(data)) if i in fibs)
 
+
 # ---------------------------------------------------------------------------
-# 6)  Kernel "zigzag": Filtra i byte secondo lo schema: on_a sì  •  off_b no  •  off_b sì  •  on_a no  (ripeti)
+# 6) "Zigzag" Kernel: Filters bytes according to the pattern: on_a yes • off_b no • off_b yes • on_a no (repeat)
 # ---------------------------------------------------------------------------
 def zigzag_kernel(
         data: BytesLike,
-        on_a: int = 4,  # primo tratto “tieni”
-        off_b: int = 2  # primo tratto “salta”
+        on_a: int = 4,
+        off_b: int = 2
 ) -> bytes:
+    if not isinstance(on_a, int) or not isinstance(off_b, int):
+        raise TypeError("on_a and off_b have to be integers")
     if on_a <= 0 or off_b <= 0:
-        raise ValueError("on_a e off_b devono essere interi positivi (>0)")
+        raise ValueError("on_a and off_b have to be positive integers (>0)")
+    if not hasattr(data, "__getitem__") or not hasattr(data, "__len__"):
+        raise TypeError("data must be a sequence type supporting indexing and length")
 
-    # Costruisce la maschera ciclica 1/0
     pattern = [1] * on_a + [0] * off_b + [1] * off_b + [0] * on_a
     m = len(pattern)
-
-    # Applica il filtro
     return bytes(b for i, b in enumerate(data) if pattern[i % m])
 
 
-# Estrae solo il byte alla posizione `pos` in ogni blocco di lunghezza `block_size`.
+# ---------------------------------------------------------------------------
+# 7) Extracts only the byte at position pos in each block of length block_size.
+# ---------------------------------------------------------------------------
 def block_pos_kernel(
         data: BytesLike,
         block_size: int,
         pos: int
 ) -> bytes:
-    if block_size <= 0:
-        raise ValueError("block_size deve essere >= 1")
+    if not isinstance(block_size, int) or block_size <= 0:
+        raise ValueError("block_size need to be an integer >= 1")
 
-    # Normalizza la posizione come indice positivo all’interno del blocco
+    if not isinstance(pos, int):
+        raise TypeError("pos need to be an intege")
+
+    if not hasattr(data, "__getitem__") or not hasattr(data, "__len__"):
+        raise TypeError("data must be an indexable sequence with a defined length")
+
+    # Normalize the position within the block
     pos = pos % block_size
-    if pos < 0 or pos >= block_size:
-        raise ValueError("pos deve ricadere nell'intervallo [-(block_size) .. block_size-1]")
 
-    # Se l'inizio (`pos`) cade oltre la lunghezza dei dati, restituiamo bytes vuoto
+    # If the position exceeds the length of the data, return empty bytes
     if pos >= len(data):
         return b""
 
-    # Costruiamo direttamente la slice con passo `block_size`
+
     return bytes(data[i] for i in range(pos, len(data), block_size))
 
-# 8. Restituisce i byte i cui indici sono divisibili per `mod`.
+
+# ---------------------------------------------------------------------------
+# 8) Returns the bytes whose indices are divisible by mod.
+# ---------------------------------------------------------------------------
 def divisible_index_kernel(data: BytesLike, mod: int) -> bytes:
+    if not isinstance(mod, int):
+        raise TypeError("mod need to be an integer")
     if mod <= 0:
-        raise ValueError("mod deve essere un intero positivo maggiore di 0")
+        raise ValueError("mod need to be a positive integer (>0)")
+    if not hasattr(data, "__getitem__") or not hasattr(data, "__len__"):
+        raise TypeError("data must be an indexable sequence with a defined length")
 
-    return bytes(data[i] for i in range(0, len(data)) if i % mod == 0)
+    return bytes(data[i] for i in range(len(data)) if i % mod == 0)
 
-# 9. Kernel "spirale compressa": in ogni blocco da 16 prendi solo posizioni 0, 1, 14, 15
+
+# ---------------------------------------------------------------------------
+# 9) "Compressed spiral" Kernel: In each 16-byte block, take only the bytes at positions 0, 1, 14, and 15.
+# ---------------------------------------------------------------------------
 def compressed_spiral_kernel(data: BytesLike, block: int = 16) -> bytes:
-    positions = {0, 1, block-2, block-1}
+    if not isinstance(block, int):
+        raise TypeError("block need to be an integer")
+    if block < 4:
+        raise ValueError("block need to be an integer >= 4")
+    if not hasattr(data, "__getitem__") or not hasattr(data, "__len__"):
+        raise TypeError("data must be an indexable sequence with a defined length")
+
+    positions = {0, 1, block - 2, block - 1}
     return bytes(data[i] for i in range(len(data)) if (i % block) in positions)
 
+
 # ---------------------------------------------------------------------------
-# 6)  It takes the first and last third of the bytecode, discarding the middle third.
+# 10) It takes the first and last third of the bytecode, discarding the middle third.
 # ---------------------------------------------------------------------------
 def tunnel_window_kernel(data: BytesLike) -> bytes:
+    if not hasattr(data, "__getitem__") or not hasattr(data, "__len__"):
+        raise TypeError("data must be an indexable sequence with a defined length")
 
     length = len(data)
-    if length < 3:
-        return bytes(data)  # too short to divide into thirds
+    if length < 3: #too short to divide in thirds
+        return bytes(data)
 
     one_third = length // 3
     return data[:one_third] + data[-one_third:]
+
