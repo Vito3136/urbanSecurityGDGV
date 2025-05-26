@@ -1,4 +1,5 @@
 from typing import Union, Callable, Dict, Iterable
+import torch
 
 BytesLike = Union[bytes, bytearray]
 
@@ -174,3 +175,29 @@ def tunnel_window_kernel(data: BytesLike) -> bytes:
     one_third = length // 3
     return data[:one_third] + data[-one_third:]
 
+# ----------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------
+
+class StrideKernel:
+    def __init__(self, keep: int, skip: int):
+        """
+        Filtro A: applica uno stride su una sequenza di byte.
+        Ritorna i byte filtrati.
+        """
+        if keep < 0 or skip < 0:
+            raise ValueError("keep and skip must be >= 0")
+        self.keep = keep
+        self.skip = skip
+
+    def stride_kernel(self, data: bytes) -> bytes:
+        out = bytearray()
+        i = 0
+        n = len(data)
+        while i < n:
+            out.extend(data[i : i + self.keep])
+            i += self.keep + self.skip
+        return bytes(out)
+
+    def __call__(self, bytecode: bytes) -> bytes:
+        return self.stride_kernel(bytecode)
