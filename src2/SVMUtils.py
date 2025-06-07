@@ -11,6 +11,8 @@ from sklearn.svm import LinearSVC
 from sklearn.svm import SVC
 from joblib import Parallel, delayed
 from sklearn.preprocessing import StandardScaler
+import torch
+from torch import nn, optim
 
 NUM_CORES = 8
 
@@ -112,7 +114,7 @@ def load_dataset_from_bytecodes(bytecode_list, label, n_jobs=-1):
     labels = [label] * len(bytecode_list)
     return data, labels
 
-def executeSVM(goodwares, malwares, is_filtered=False):
+'''def executeSVM(goodwares, malwares, is_filtered=False):
 
     start = time.time()
     # Loading data
@@ -143,12 +145,12 @@ def executeSVM(goodwares, malwares, is_filtered=False):
     X = 0
     y = 0
 
-    '''scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X_array)
+    #scaler = StandardScaler()
+    #X_scaled = scaler.fit_transform(X_array)
 
-    print("Log 4: standardize")
+    #print("Log 4: standardize")
 
-    X_array.clear()'''
+    #X_array.clear()
 
     # Train/test split
     X_train, X_test, y_train, y_test = train_test_split(X_array, y_array, test_size=0.2, stratify=y_array, random_state=42)
@@ -167,4 +169,112 @@ def executeSVM(goodwares, malwares, is_filtered=False):
     # Assessment¢
     y_pred = model.predict(X_test)
     print("Accuracy:", accuracy_score(y_test, y_pred))
-    print(classification_report(y_test, y_pred, target_names=['Goodware', 'Malware']))
+    print(classification_report(y_test, y_pred, target_names=['Goodware', 'Malware']))'''
+
+def executeSVM(goodwares, malwares):
+
+    start = time.time()
+    # Loading data
+    X_good, y_good = load_dataset_from_bytecodes(goodwares, 0, NUM_CORES)
+    X_mal, y_mal = load_dataset_from_bytecodes(malwares, 1, NUM_CORES)
+
+    end = time.time()
+    print("Log 1: load_dataset_from_bytecodes took {:.2f} minutes".format((end - start) / 60))
+    start = time.time()
+
+    # Union
+    X = np.array(X_good + X_mal)
+    y = np.array(y_good + y_mal)
+
+    end = time.time()
+    print("Log 2: union took {:.2f} minutes".format((end - start) / 60))
+    start = time.time()
+
+    X_array = np.stack(X)
+    y_array = np.array(y)
+
+    end = time.time()
+    print("Log 3: stack e array took {:.2f} minutes".format((end - start) / 60))
+    start = time.time()
+
+    X = 0
+    y = 0
+
+    # Train/test split
+    X_train, X_test, y_train, y_test = train_test_split(X_array, y_array, test_size=0.2, stratify=y_array, random_state=42)
+
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    X_train_t = torch.tensor(X_train, dtype=torch.float32).to(device)
+    X_test_t = torch.tensor(X_test, dtype=torch.float32).to(device)
+    y_train_t = torch.tensor(y_train, dtype=torch.float32).to(device) * 2 - 1  # {-1, +1}
+    y_test_t = torch.tensor(y_test, dtype=torch.float32).to(device) * 2 - 1
+
+    end = time.time()
+    print("Log 4: train_test_split took {:.2f} minutes".format((end - start) / 60))
+    start = time.time()
+
+    # Addestra il modello
+    model = train_svm_from_data(X_train_t, y_train_t)
+
+    X_train_t = 0
+    y_train_t = 0
+
+    end = time.time()
+    print("Log 5: addestramento modello took {:.2f} minutes".format((end - start) / 60))
+    start = time.time()
+
+    # Predici su test set
+    y_pred_t = predict_svm(model, X_test_t)
+
+    X_test_t = 0
+
+    end = time.time()
+    print("Log 6: predict su test set took {:.2f} minutes".format((end - start) / 60))
+    start = time.time()
+
+    # Converte i tensor PyTorch in numpy e da -1/+1 a 0/1
+    y_pred = ((y_pred_t.cpu().numpy() + 1) // 2).astype(int)
+    y_true = ((y_test_t.cpu().numpy() + 1) // 2).astype(int)
+
+    end = time.time()
+    print("Log 7: conversione in numpy took {:.2f} minutes".format((end - start) / 60))
+    start = time.time()
+
+    # Valutazione
+    print("Accuracy:", accuracy_score(y_true, y_pred))
+    print(classification_report(y_true, y_pred, target_names=['Goodware', 'Malware']))
+
+
+def train_svm_from_data(X_train, y_train, epochs=10, lr=0.1):
+    input_dim = X_train.shape[1]
+
+    class LinearSVM(nn.Module):
+        def __init__(self, input_dim):
+            super().__init__()
+            self.linear = nn.Linear(input_dim, 1)
+        def forward(self, x):
+            return self.linear(x)
+
+    def hinge_loss(outputs, labels):
+        return torch.mean(torch.clamp(1 - outputs.squeeze() * labels, min=0))
+
+    model = LinearSVM(input_dim).to(X_train.device)
+    optimizer = optim.SGD(model.parameters(), lr=lr)
+    for epoch in range(epochs):
+        model.train()
+        optimizer.zero_grad()
+        outputs = model(X_train)
+        loss = hinge_loss(outputs, y_train)
+        loss.backward()
+        optimizer.step()
+        if epoch % 10 == 0:
+            print(f"Epoch {epoch}, Loss: {loss.item():.4f}")
+    return model
+
+
+def predict_svm(model, X):
+    model.eval()
+    with torch.no_grad():
+        outputs = model(X)
+        preds = torch.sign(outputs.squeeze())
+    return preds
