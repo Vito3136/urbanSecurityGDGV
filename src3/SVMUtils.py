@@ -49,7 +49,7 @@ def predict(model, device, X_new, batch_size=256):
     returns torch.Tensor con valori -1/+1
     """
     loader = DataLoader(TensorDataset(torch.from_numpy(X_new.astype(np.float32))),
-                        batch_size=batch_size, shuffle=False)
+                        batch_size=batch_size, shuffle=False, pin_memory=False)
     preds = []
     model.eval()
     with torch.no_grad():
@@ -86,13 +86,13 @@ def executeSVM(goodwares, malwares, batch_size=1024, epochs=10, lr=0.1):
     BATCH_SIZE = 256
     train_ds = TensorDataset(torch.from_numpy(X_train), torch.from_numpy(y_train))
     test_ds = TensorDataset(torch.from_numpy(X_test), torch.from_numpy(y_test))
-    train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True, pin_memory=True)
-    test_loader = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False, pin_memory=True)
+    train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True, pin_memory=False)
+    test_loader = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False, pin_memory=False)
 
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
     model = LinearSVM(X.shape[1]).to(device)
     optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, weight_decay=1e-4)  # L2 = weight_decay
-    EPOCHS = 5
+    EPOCHS = 10
 
     # ---------------------------
     # 5. Training loop

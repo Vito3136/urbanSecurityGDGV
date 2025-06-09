@@ -1,4 +1,4 @@
-import gc
+import time, gc
 
 from src3.SVMUtils import executeSVM
 from src3.bytecode_manager import *
@@ -17,6 +17,8 @@ for i in range(0, 51, 5):
     for j in range(0, 51, 5):
         if (j == 0):
             j = 1
+
+        start = time.time()
         filterStrideKernel = StrideKernel(keep=i, skip=j)
 
         def filter(b):
@@ -30,17 +32,11 @@ for i in range(0, 51, 5):
             delayed(filter)(b) for b in goodware_bytecodes
         )
 
-       # Pulizia
-        goodware_bytecodes.clear()
-
         # Filtraggio dei bytecodes
         malware_bytecodes_filtered_with_Stride_Kernel = []
         malware_bytecodes_filtered_with_Stride_Kernel = Parallel(n_jobs=NUM_CORES)(
             delayed(filter)(b) for b in malware_bytecodes
         )
-
-        # Pulizia
-        malware_bytecodes.clear()
 
         # Calcolata la lunghezza maggio tra goodwares e malwares
         lenBiggestGoodware = get_dimension_biggest_bytecode(goodware_bytecodes_filtered_with_Stride_Kernel)
@@ -66,3 +62,6 @@ for i in range(0, 51, 5):
         goodware_bytecodes_filtered_with_Stride_Kernel_zero_padding.clear()
         malware_bytecodes_filtered_with_Stride_Kernel_zero_padding.clear()
         gc.collect()
+        end = time.time()
+
+        print("Time taken: {:.2f} minutes".format((end - start) / 60))
