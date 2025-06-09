@@ -8,296 +8,130 @@ from joblib import Parallel, delayed
 
 NUM_CORES = 8
 
-# ---------------- dataset.py (o in cima al file) ----------------
-class BytecodeDataset(torch.utils.data.Dataset):
-    """Converte on-the-fly i campioni in tensori."""
-    def __init__(self, X_good, X_mal, indices):
-        self.X_good = X_good
-        self.X_mal  = X_mal
-        self.indices = indices
-
-    def __len__(self):
-        return len(self.indices)
-
-    def __getitem__(self, i):
-        idx = self.indices[i]
-        if idx < len(self.X_good):
-            feats, label = self.X_good[idx], 0
-        else:
-            feats, label = self.X_mal[idx - len(self.X_good)], 1
-        feats = torch.from_numpy(feats.astype(np.float32))
-        label = torch.tensor(label*2 - 1, dtype=torch.float32)
-        return feats, label
-
-'''# ---------- Dataset + Dataloader ---------- #
-class BytecodeDataset(Dataset):
-    """
-    Tiene i dati come numpy e converte a tensore solo
-    quando il campione serve (→ meno RAM / VRAM).
-    """
-    def __init__(self, X, y):
-        # cast una volta sola, ma resti su numpy
-        self.X = X.astype(np.float32)
-        self.y = (y.astype(np.float32) * 2 - 1)   # {0,1} → {-1,+1}
-
-    def __len__(self):
-        return len(self.X)
-
-    def __getitem__(self, idx):
-        # da numpy → torch al volo
-        return (torch.from_numpy(self.X[idx]),
-                torch.tensor(self.y[idx]))'''
-
-def make_loader(X_good, X_mal, index_array, batch, shuffle, workers):
-    ds = BytecodeDataset(X_good, X_mal, index_array)
-    return DataLoader(ds,
-                      batch_size=batch,
-                      shuffle=shuffle,
-                      num_workers=workers,
-                      pin_memory=True,
-                      persistent_workers=(workers > 0))
-
-
-'''def make_loader(X, y, batch_size, shuffle, num_workers):
-    ds = BytecodeDataset(X, y)
-    return DataLoader(ds, batch_size=batch_size,
-                      shuffle=shuffle,
-                      num_workers=num_workers,
-                      pin_memory=True)'''
-
-# ---------- Modello SVM lineare ---------- #
-class LinearSVM(nn.Module):
-    def __init__(self, input_dim):
-        super().__init__()
-        self.linear = nn.Linear(input_dim, 1)
-
-    def forward(self, x):
-        return self.linear(x)
-
-def hinge_loss(outputs, labels):
-    return torch.mean(torch.clamp(1 - outputs.squeeze() * labels, min=0))
-
-def train_svm(device, loader, input_dim, epochs=10, lr=0.1):
-    model = LinearSVM(input_dim).to(device)
-    opt   = optim.SGD(model.parameters(), lr=lr)
-
-    for epoch in range(epochs):
-        model.train()
-        for step, (xb, yb) in enumerate(loader):
-            xb, yb = xb.to(device), yb.to(device)
-            opt.zero_grad()
-            loss = hinge_loss(model(xb), yb)
-            loss.backward()
-            opt.step()
-
-            if (epoch + step / len(loader)) % 0.5 == 0:
-                print(f"Epoch {epoch:.1f}, Step {step}, Loss {loss.item():.4f}")
-    return model
-
-def predict_svm(model, loader, device):
-    model.eval()
-    preds = []
-    with torch.no_grad():
-        for xb, _ in loader:
-            xb = xb.to(device)
-            preds.append(torch.sign(model(xb).squeeze()).cpu())
-    return torch.cat(preds)
-
-# ---------- Pipeline completa ---------- #
-def executeSVM(goodwares, malwares, batch_size=1024, epochs=10, lr=0.1):
-
-    start = time.time()
-    print("1")
-    X_good, y_good = load_dataset_from_bytecodes(goodwares, 0, NUM_CORES)
-    print("2")
-    X_mal , y_mal  = load_dataset_from_bytecodes(malwares, 1, NUM_CORES)
-    print("3")
-
-    end = time.time()
-    print("4")
-    print(f"Log 1: load_dataset_from_bytecodes {(end-start)/60:.2f} min")
-    print("5")
-    start = time.time()
-    print("6")
-
-    # 1) Unisci *solo logicamente* le liste (senza copiarle)
-    def idx_to_sample(idx):
-        """Dato un indice globale, restituisce (features, label)."""
-        if idx < len(X_good):
-            return X_good[idx], 0  # goodware
-        else:
-            return X_mal[idx - len(X_good)], 1  # malware
-
-    print("7")
-    N_good, N_mal = len(X_good), len(X_mal)
-    print("8")
-    N_tot = N_good + N_mal
-    print("9")
-
-    # 2) Etichette: vettoriale e leggerissimo
-    y = np.concatenate([
-        np.zeros(N_good, dtype=np.int8),
-        np.ones(N_mal, dtype=np.int8)
-    ])
-    print("10")
-
-    # 3) Split stratificato sugli INDICI, non sugli oggetti
-    all_idx = np.arange(N_tot)
-    print("11")
-    train_idx, test_idx, y_train, y_test = train_test_split(
-        all_idx, y, test_size=0.2, stratify=y, random_state=42)
-    print("12")
-
-    end = time.time()
-    print("13")
-    print("Log 2: train_test_split took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # 5) Loader
-    print("14")
-    train_loader = DataLoader(BytecodeDataset(train_idx),
-                              batch_size=1024, shuffle=True,
-                              num_workers=NUM_CORES, pin_memory=True)
-
-    end = time.time()
-    print("15")
-    print("Log 3: train_loader took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    test_loader = DataLoader(BytecodeDataset(test_idx),
-                             batch_size=1024, shuffle=False,
-                             num_workers=NUM_CORES, pin_memory=True)
-
-    end = time.time()
-    print("16")
-    print("Log 4: test_loader took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # ------------------- DEVICE ------------------- #
-    device = torch.device(
-        "mps" if torch.backends.mps.is_available() else
-        "cuda" if torch.cuda.is_available() else
-        "cpu"
-    )
-
-    print("17")
-
-    end = time.time()
-    print("Log 5: torch.device took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # ------------------- TRAIN -------------------- #
-    # input_dim = numero di feature del primo campione del training set
-    print("18")
-    input_dim = idx_to_sample(train_idx[0])[0].shape[0]
-
-    print("19")
-    model = train_svm(device,
-                      train_loader,
-                      input_dim=input_dim,
-                      epochs=epochs,
-                      lr=lr)
-
-    print("20")
-    end = time.time()
-    print("Log 6: train_svm took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # ------------------- PREDICT ------------------ #
-    print("21")
-    y_pred_t = predict_svm(model, test_loader, device)  # tensor {-1,+1}
-
-    end = time.time()
-    print("Log 7: predict_svm took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # ------------------- EVAL --------------------- #
-    print("22")
-    y_pred = ((y_pred_t.numpy() + 1) // 2).astype(int)  # → {0,1}
-
-    # y_test l’abbiamo già ottenuto da train_test_split ed è {0,1}
-    print("Accuracy:", accuracy_score(y_test, y_pred))
-    print("23")
-    print(classification_report(y_test, y_pred,
-                                target_names=['Goodware', 'Malware']))
-
-    end = time.time()
-    print("Log 8: ultima parte took {:.2f} minutes".format((end - start) / 60))
-
-    '''# Union
-    X = np.array(X_good + X_mal, dtype=object)  # dtype=object evita copia inutile
-    y = np.array(y_good + y_mal, dtype=np.int8)
-    X_good = y_good = X_mal = y_mal = None ; gc.collect()
-
-    # Train / test split
-    print("7")
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, stratify=y, random_state=42)
-
-    print("8")
-    end = time.time()
-    print("9")
-    print("Log 2: train_test_split took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # Dataloader
-    print("10")
-    train_loader = make_loader(X_train, y_train,
-                               batch_size=batch_size,
-                               shuffle=True,
-                               num_workers=NUM_CORES)
-
-    end = time.time()
-    print("Log 3: train_loader took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    test_loader  = make_loader(X_test,  y_test,
-                               batch_size=batch_size,
-                               shuffle=False,
-                               num_workers=NUM_CORES)
-
-    end = time.time()
-    print("Log 4: test_loader took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    device = torch.device("mps" if torch.backends.mps.is_available()
-                          else "cuda" if torch.cuda.is_available()
-                          else "cpu")
-
-    end = time.time()
-    print("Log 5: torch.device took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # Train
-    model = train_svm(device, train_loader,
-                      input_dim=X_train[0].shape[0],
-                      epochs=epochs, lr=lr)
-
-    end = time.time()
-    print("Log 6: train_svm took {:.2f} minutes".format((end - start) / 60))
-    start = time.time()
-
-    # Predict
-    y_pred_t = predict_svm(model, test_loader, device)
-
-    end = time.time()
-    print("Log 7: predict_svm took {:.2f} minutes".format((end - start) / 60))
-
-    # Valutazione
-    y_pred = ((y_pred_t.numpy() + 1) // 2).astype(int)
-    y_true = ((test_loader.dataset.y + 1) // 2).astype(int)
-    print("Accuracy:", accuracy_score(y_true, y_pred))
-    print(classification_report(y_true, y_pred,
-                                target_names=['Goodware', 'Malware']))'''
-
-
 def load_dataset_from_bytecodes(bytecode_list, label, n_jobs=-1):
     # Parallelizza la conversione con joblib
     data = Parallel(n_jobs=n_jobs)(
         delayed(convert_bytecode)(bc) for bc in bytecode_list
     )
     labels = [label] * len(bytecode_list)
+
+    # data = lista di array NumPy (uno per ogni bytecode)
+    # labels = lista lunga quanto i campioni, con la stessa etichetta ripetuta
     return data, labels
 
 def convert_bytecode(bytecode):
+    # Prende un buffer di byte qualsiasi (bytes, bytearray, memoryview)
+    # dtype=np.uint8 dice a NumPy di interpretare ogni singolo byte come un intero senza segno 0-255.
     return np.frombuffer(bytecode, dtype=np.uint8)
+
+# ---------------------------
+# 4. Modello linear-SVM
+# ---------------------------
+class LinearSVM(nn.Module):
+    def __init__(self, n_features):
+        super().__init__()
+        self.linear = nn.Linear(n_features, 1, bias=True)
+
+    def forward(self, x):
+        return self.linear(x).squeeze(1)     # (batch,)
+
+def hinge_loss(outputs, targets, C=1.0):
+    """targets in {-1, +1}; outputs qualunque"""
+    loss = torch.clamp(1 - targets * outputs, min=0)  # hinge
+    return C * loss.mean()
+
+# ---------------------------
+# 6. Predict su nuovi dati
+# ---------------------------
+def predict(model, device, X_new, batch_size=256):
+    """
+    X_new: numpy array shape (N, F)
+    returns torch.Tensor con valori -1/+1
+    """
+    loader = DataLoader(TensorDataset(torch.from_numpy(X_new.astype(np.float32))),
+                        batch_size=batch_size, shuffle=False)
+    preds = []
+    model.eval()
+    with torch.no_grad():
+        for xb, in loader:
+            xb = xb.to(device)
+            preds.append(torch.sign(model(xb)).cpu())
+    return torch.cat(preds, dim=0)
+
+def executeSVM(goodwares, malwares, batch_size=1024, epochs=10, lr=0.1):
+
+    # Creazione di lista di n array di interi (byte convertiti) e lista di n labels
+    X_good, y_good = load_dataset_from_bytecodes(goodwares, 0, NUM_CORES)
+    X_mal , y_mal  = load_dataset_from_bytecodes(malwares, 1, NUM_CORES)
+
+    # ---------------------------
+    # 1. Combinazione dei dati
+    # ---------------------------
+    # X_good, X_mal: lista di ndarray (n_features,)  –> li empiliamo in un'unica matrice
+    X = np.vstack(X_good + X_mal).astype(np.float32)  # shape (N, F)
+    y_np = np.hstack(y_good + y_mal).astype(np.int64)  # shape (N,)
+
+    # da 0/1 a -1/+1 (lo SVM con hinge loss lo preferisce)
+    y_np[y_np == 0] = -1
+
+    # ---------------------------
+    # 2. Train / test split
+    # ---------------------------
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y_np, test_size=0.2, random_state=42, stratify=y_np)
+
+    # ---------------------------
+    # 3. DataLoader (batch al 100 %)
+    # ---------------------------
+    BATCH_SIZE = 256
+    train_ds = TensorDataset(torch.from_numpy(X_train), torch.from_numpy(y_train))
+    test_ds = TensorDataset(torch.from_numpy(X_test), torch.from_numpy(y_test))
+    train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True, pin_memory=True)
+    test_loader = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False, pin_memory=True)
+
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    model = LinearSVM(X.shape[1]).to(device)
+    optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, weight_decay=1e-4)  # L2 = weight_decay
+    EPOCHS = 5
+
+    # ---------------------------
+    # 5. Training loop
+    # ---------------------------
+    for epoch in range(1, EPOCHS + 1):
+        model.train()
+        running_loss = 0.0
+        for xb, yb in train_loader:
+            xb, yb = xb.to(device), yb.to(device, dtype=torch.float32)
+            optimizer.zero_grad()
+
+            # ---------------------------
+            # MIXED-PRECISION QUI 👇
+            # ---------------------------
+            with torch.autocast(device_type="mps", dtype=torch.float16):
+                out = model(xb)
+                loss = hinge_loss(out, yb)
+            # ---------------------------
+
+            loss.backward()
+            optimizer.step()
+            running_loss += loss.item() * xb.size(0)
+
+        epoch_loss = running_loss / len(train_loader.dataset)
+
+        # ––– quick val accuracy –––
+        model.eval()
+        correct, total = 0, 0
+        with torch.no_grad():
+            for xb, yb in test_loader:
+                xb = xb.to(device)
+                preds = torch.sign(model(xb)).cpu()  # -1 / +1
+                correct += (preds == yb).sum().item()
+                total += yb.size(0)
+        acc = correct / total * 100
+        print(f"Epoch {epoch:02d} | loss {epoch_loss:.4f} | val acc {acc:.2f}%")
+
+    y_pred = predict(model, device, X_test)  # -> tensor(-1/+1)
+
+    print("Accuracy:", accuracy_score(y_test, y_pred))
+    print(classification_report(y_test, y_pred, target_names=['Goodware', 'Malware']))
+
