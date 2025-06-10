@@ -56,7 +56,7 @@ for i in range(0, 51, 5):
         goodware_bytecodes_filtered_with_Stride_Kernel.clear()
         malware_bytecodes_filtered_with_Stride_Kernel.clear()
 
-        print("Filtered with keep " + str(i) + " skip " + str(j))
+        print("Filtered with filter Stride Kernel with parameters keep " + str(i) + " skip " + str(j))
         executeSVM(goodware_bytecodes_filtered_with_Stride_Kernel_zero_padding, malware_bytecodes_filtered_with_Stride_Kernel_zero_padding)
 
         goodware_bytecodes_filtered_with_Stride_Kernel_zero_padding.clear()
