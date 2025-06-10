@@ -255,3 +255,23 @@ class TunnelWindowKernel:
 
     def __call__(self, data: ByteString) -> bytes:
         return self.tunnel_window_kernel(data)
+
+# ---------------------------------------------------------------------------
+# 11) Reverse-tunnel-window kernel  →  class
+# ---------------------------------------------------------------------------
+class ReverseTunnelWindowKernel:
+    """
+    Filtro J: restituisce il secondo terzo del bytecode,
+    scartando il 1° ed il 3° terzo (finestra a tunnel al contrario).
+    """
+
+    @staticmethod
+    def tunnel_window_kernel(data: ByteString) -> bytes:
+        length = len(data)
+        if length < 3:
+            return bytes(data)
+        one_third = length // 3
+        return data[one_third:2 * one_third]
+
+    def __call__(self, data: ByteString) -> bytes:
+        return self.tunnel_window_kernel(data)
