@@ -21,7 +21,7 @@ class StrideKernel:
 
     def stride_kernel(self, data: bytes) -> bytes:
         out = bytearray()
-        i = 1024
+        i = 0
         n = len(data)
         while i < n:
             out.extend(data[i : i + self.keep])
@@ -75,10 +75,12 @@ class PowerOfNKernel:
 
     def power_of_n_kernel(self, data: ByteString) -> bytes:
         i = 1
+        j = 1
         out = bytearray()
         while i < len(data):
             out.append(data[i])
-            i *= self.n
+            j += 1
+            i = j**self.n
         return bytes(out)
 
     def __call__(self, data: ByteString) -> bytes:
