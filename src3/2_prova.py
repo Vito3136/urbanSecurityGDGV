@@ -4,10 +4,22 @@ from src3.SVMUtils import executeSVM
 from src3.bytecode_manager import *
 from src3.bytekernels import *
 from joblib import Parallel, delayed
+from pathlib import Path
+from datetime import datetime
+
+current_time = datetime.now().strftime("%H:%M:%S")
+print("Current time: " + current_time)
+
+base_dir = Path(__file__).parent
+goodwares_path = (base_dir.parent / "resources" / "goodware_dataset").resolve()
+non_valid_goodwares_path = (base_dir.parent / "resources" / "non_valid_goodwares").resolve()
+malwares_path = (base_dir.parent / "resources" / "malware_dataset").resolve()
+non_valid_malwares_path = (base_dir.parent / "resources" / "non_valid_malwares").resolve()
+
 
 # Creazione delle liste di bytecodes binari
-goodware_bytecodes = collect_bytecodes("/Users/vitoditrani/Desktop/UNIVERSITA/MAGISTRALE/urban_security/urbanSecurityGDGV/resources/goodware_dataset", "/Users/vitoditrani/Desktop/UNIVERSITA/MAGISTRALE/urban_security/urbanSecurityGDGV/resources/non_valid_goodwares")
-malware_bytecodes = collect_bytecodes("/Users/vitoditrani/Desktop/UNIVERSITA/MAGISTRALE/urban_security/urbanSecurityGDGV/resources/malware_dataset", "/Users/vitoditrani/Desktop/UNIVERSITA/MAGISTRALE/urban_security/urbanSecurityGDGV/resources/non_valid_malwares")
+goodware_bytecodes = collect_bytecodes(str(goodwares_path), str(non_valid_goodwares_path))
+malware_bytecodes = collect_bytecodes(str(malwares_path), str(non_valid_malwares_path))
 
 start = time.time()
 primeIndexKernel = PrimeIndexKernel()
@@ -33,7 +45,7 @@ malware_bytecodes_filtered_with_Prime_Index_Kernel = Parallel(n_jobs=NUM_CORES)(
 
 print("2")
 
-# Calcolata la lunghezza maggio tra goodwares e malwares
+# Calcolata la lunghezza maggiore tra goodwares e malwares
 lenBiggestGoodware = get_dimension_biggest_bytecode(goodware_bytecodes_filtered_with_Prime_Index_Kernel)
 lenBiggestMalware = get_dimension_biggest_bytecode(malware_bytecodes_filtered_with_Prime_Index_Kernel)
 
