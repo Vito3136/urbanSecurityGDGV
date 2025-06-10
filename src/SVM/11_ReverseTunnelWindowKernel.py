@@ -1,8 +1,8 @@
 import time, gc
 
-from src3.SVMUtils import executeSVM
-from src3.bytecode_manager import *
-from src3.bytekernels import *
+from src.SVM.SVMUtils import executeSVM
+from src.SVM.bytecode_manager import *
+from src.SVM.bytekernels import *
 from joblib import Parallel, delayed
 from pathlib import Path
 from datetime import datetime
