@@ -34,7 +34,7 @@ def collect_bytecodes(root_dir: str, invalid_dir: str) -> list[bytes]:
                 except Exception as e:
                     print(f"Errore nella lettura di {full_path}: {e}")
 
-    print(f"Non valid data: {numberNonValidExe}")
+    if numberNonValidExe != 0: print(f"Non valid data: {numberNonValidExe}")
     return bytecodes
 
 def get_dimension_biggest_bytecode(bytecodes: list[bytes]) -> int:
