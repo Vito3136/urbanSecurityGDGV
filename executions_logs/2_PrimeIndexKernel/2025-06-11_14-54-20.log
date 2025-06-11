@@ -1,0 +1,24 @@
+Current time: 14:54:20
+Filtered with filter Prime Index Kernel
+Epoch 01 | loss inf | val acc 48.37%
+Epoch 02 | loss inf | val acc 56.13%
+Epoch 03 | loss inf | val acc 51.92%
+Epoch 04 | loss inf | val acc 53.29%
+Epoch 05 | loss inf | val acc 54.94%
+Epoch 06 | loss inf | val acc 52.93%
+Epoch 07 | loss inf | val acc 50.09%
+
+Early stopping triggered at epoch 7. Best val acc: 56.13%
+
+Accuracy: 0.5612788632326821 
+
+              precision    recall  f1-score   support
+
+    Goodware       0.63      0.22      0.33       814
+     Malware       0.55      0.88      0.67       875
+
+    accuracy                           0.56      1689
+   macro avg       0.59      0.55      0.50      1689
+weighted avg       0.59      0.56      0.51      1689
+
+Time taken: 21.37 minutes
