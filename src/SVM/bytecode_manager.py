@@ -28,11 +28,11 @@ def collect_bytecodes(root_dir: str, invalid_dir: str) -> list[bytes]:
                         if header == b'MZ':  # Firma di file PE/EXE
                             bytecodes.append(header + rest)
                         else:
-                            print(f"Errore nella lettura di {full_path}, header {header} is not b'MZ'")
+                            print(f"Error while reading {full_path}, header {header} is not b'MZ'")
                             shutil.move(full_path, os.path.join(invalid_dir, fname))
                             numberNonValidExe = numberNonValidExe + 1
                 except Exception as e:
-                    print(f"Errore nella lettura di {full_path}: {e}")
+                    print(f"Error while reading {full_path}: {e}")
 
     if numberNonValidExe != 0: print(f"Non valid data: {numberNonValidExe}")
     return bytecodes

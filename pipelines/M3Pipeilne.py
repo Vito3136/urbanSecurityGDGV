@@ -19,7 +19,7 @@ scripts = [
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 file_path = Path(__file__).parent
 log_dir = file_path / timestamp
-log_dir.mkdir(exist_ok=True)
+log_dir.mkdir(exist_ok=True, parents=True)
 
 # Esegui ogni script e salva l'output
 for script in scripts:

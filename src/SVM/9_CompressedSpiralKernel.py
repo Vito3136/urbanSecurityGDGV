@@ -37,7 +37,7 @@ script_name = Path(__file__).stem
 # Crea cartella con timestamp
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 log_dir = Path(__file__).parents[2] / "executions_logs" / script_name
-log_dir.mkdir(exist_ok=True)
+log_dir.mkdir(exist_ok=True, parents=True)
 
 # Nome file log = nome script + .log
 log_file = log_dir / f"{timestamp}.log"
