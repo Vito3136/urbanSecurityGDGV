@@ -1,0 +1,33 @@
+Current time: 12:25:50
+Filtered with filter Fibonacci Index Kernel
+Epoch 01 | loss 17.3569 | val acc 69.51%
+Epoch 02 | loss 11.9568 | val acc 70.46%
+Epoch 03 | loss 10.1567 | val acc 49.14%
+Epoch 04 | loss 12.6269 | val acc 48.13%
+Epoch 05 | loss 11.6670 | val acc 66.49%
+Epoch 06 | loss 11.7408 | val acc 69.57%
+Epoch 07 | loss 11.2517 | val acc 71.11%
+Epoch 08 | loss 11.6242 | val acc 48.61%
+Epoch 09 | loss 11.3330 | val acc 53.40%
+Epoch 10 | loss 11.2864 | val acc 72.05%
+Epoch 11 | loss 11.7307 | val acc 73.18%
+Epoch 12 | loss 9.7249 | val acc 67.50%
+Epoch 13 | loss 11.4336 | val acc 67.91%
+Epoch 14 | loss 11.5003 | val acc 48.61%
+Epoch 15 | loss 10.4360 | val acc 72.94%
+Epoch 16 | loss 10.7130 | val acc 73.18%
+
+Early stopping triggered at epoch 16. Best val acc: 73.18%
+
+Accuracy: 0.7317939609236235 
+
+              precision    recall  f1-score   support
+
+    Goodware       0.90      0.50      0.64       814
+     Malware       0.67      0.95      0.79       875
+
+    accuracy                           0.73      1689
+   macro avg       0.78      0.72      0.71      1689
+weighted avg       0.78      0.73      0.72      1689
+
+Time taken: 1.90 minutes
