@@ -7,13 +7,14 @@ base_path = Path(__file__).resolve().parents[1] / "src" / "SVM"
 
 # Percorsi manuali degli script da eseguire
 scripts = [
-    base_path / "1_StrideKernel.py"
-    '''base_path / "3_PowerOfNKernel.py",
+    base_path / "6_ZigZagKernel.py"
+]
+
+'''base_path / "1_StrideKernel.py"
+    base_path / "3_PowerOfNKernel.py",
     base_path / "5_FibonacciIndexKernel.py",
     base_path / "6_ZigZagKernel.py",
-    base_path / "8_DivisibleIndexKernel.py",
-    base_path / "11_ReverseTunnelWindowKernel.py"'''
-]
+    base_path / "8_DivisibleIndexKernel.py",'''
 
 # Crea cartella log con timestamp
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")

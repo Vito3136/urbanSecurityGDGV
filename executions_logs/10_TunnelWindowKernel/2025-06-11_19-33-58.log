@@ -1,0 +1,29 @@
+Current time: 19:33:58
+Filtered with filter Tunnel Window Kernel
+Epoch 01 | loss inf | val acc 51.57%
+Epoch 02 | loss inf | val acc 53.17%
+Epoch 03 | loss inf | val acc 61.34%
+Epoch 04 | loss inf | val acc 60.45%
+Epoch 05 | loss inf | val acc 55.18%
+Epoch 06 | loss inf | val acc 58.91%
+Epoch 07 | loss inf | val acc 56.60%
+Epoch 08 | loss inf | val acc 63.71%
+Epoch 09 | loss inf | val acc 55.30%
+Epoch 10 | loss inf | val acc 54.83%
+Epoch 11 | loss inf | val acc 61.34%
+Epoch 12 | loss inf | val acc 55.95%
+Epoch 13 | loss inf | val acc 52.87%
+
+Early stop at epoch 13. Best val acc: 63.71%
+
+Accuracy: 0.6370633510953226
+              precision    recall  f1-score   support
+
+    Goodware       0.58      0.87      0.70       814
+     Malware       0.78      0.42      0.54       875
+
+    accuracy                           0.64      1689
+   macro avg       0.68      0.65      0.62      1689
+weighted avg       0.68      0.64      0.62      1689
+
+Time taken: 22.23 minutes

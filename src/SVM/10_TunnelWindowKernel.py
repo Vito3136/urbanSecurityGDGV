@@ -89,7 +89,6 @@ lenBiggestGoodware = get_dimension_biggest_bytecode(goodware_bytecodes_filtered_
 lenBiggestMalware = get_dimension_biggest_bytecode(malware_bytecodes_filtered_with_Tunnel_Window_Kernel)
 
 
-
 # Si effettua lo zero-padding creando array di lunghezza del piu grande tra malware e goodware + 8
 if (lenBiggestGoodware > lenBiggestMalware):
     lenDef = lenBiggestGoodware + 8
