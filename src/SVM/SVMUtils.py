@@ -1,3 +1,4 @@
+import copy
 import time, gc, numpy as np, torch
 import torch.nn as nn
 import torch.optim as optim
@@ -58,7 +59,7 @@ def predict(model, device, X_new, batch_size=256):
             preds.append(torch.sign(model(xb)).cpu())
     return torch.cat(preds, dim=0)
 
-def executeSVM(goodwares, malwares, batch_size=1024, epochs=10, lr=0.1):
+def executeSVM(goodwares, malwares, epochs=50, lr=0.1, patience=5):
 
     # Creazione di lista di n array di interi (byte convertiti) e lista di n labels
     X_good, y_good = load_dataset_from_bytecodes(goodwares, 0, NUM_CORES)
@@ -92,12 +93,16 @@ def executeSVM(goodwares, malwares, batch_size=1024, epochs=10, lr=0.1):
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
     model = LinearSVM(X.shape[1]).to(device)
     optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, weight_decay=1e-4)  # L2 = weight_decay
-    EPOCHS = 10
+
+    # Early stopping setup
+    best_acc = 0
+    best_model_state = None
+    epochs_no_improve = 0
 
     # ---------------------------
     # 5. Training loop
     # ---------------------------
-    for epoch in range(1, EPOCHS + 1):
+    for epoch in range(1, epochs + 1):
         model.train()
         running_loss = 0.0
         for xb, yb in train_loader:
@@ -130,8 +135,24 @@ def executeSVM(goodwares, malwares, batch_size=1024, epochs=10, lr=0.1):
         acc = correct / total * 100
         print(f"Epoch {epoch:02d} | loss {epoch_loss:.4f} | val acc {acc:.2f}%")
 
+        # Check for improvement
+        if acc > best_acc:
+            best_acc = acc
+            best_model_state = copy.deepcopy(model.state_dict())
+            epochs_no_improve = 0
+        else:
+            epochs_no_improve += 1
+
+        if epochs_no_improve >= patience:
+            print(f"\nEarly stopping triggered at epoch {epoch}. Best val acc: {best_acc:.2f}%\n")
+            break
+
+    # 6. Predict con modello migliore
+    if best_model_state:
+        model.load_state_dict(best_model_state)
+
     y_pred = predict(model, device, X_test)  # -> tensor(-1/+1)
 
-    print("Accuracy:", accuracy_score(y_test, y_pred))
+    print("Accuracy:", accuracy_score(y_test, y_pred), "\n")
     print(classification_report(y_test, y_pred, target_names=['Goodware', 'Malware']))
 

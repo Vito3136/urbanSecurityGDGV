@@ -1,22 +1,65 @@
-import time, gc
+import gc
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
 
 from src.SVM.SVMUtils import executeSVM
 from src.SVM.bytecode_manager import *
 from src.SVM.bytekernels import *
-from joblib import Parallel, delayed
-from pathlib import Path
-from datetime import datetime
+
+# ───── Logger per duplicare stdout ─────
+class Logger:
+    def __init__(self, filename):
+        self.terminal = sys.stdout
+        self.log = open(filename, "w")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def flush(self):
+        self.terminal.flush()
+        self.log.flush()
+
+# ───── Cattura eccezioni globali ─────
+def handle_exception(exc_type, exc_value, exc_traceback):
+    if issubclass(exc_type, KeyboardInterrupt):
+        sys.__stderr__.write("Manually interrupted.\n")
+        return
+    import traceback
+    traceback.print_exception(exc_type, exc_value, exc_traceback, file=sys.stderr)
+
+# ───── Configurazione log dinamica ─────
+# Nome del file corrente (senza estensione)
+script_name = Path(__file__).stem
+
+# Crea cartella con timestamp
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+log_dir = Path(__file__).parents[2] / "executions_logs" / script_name
+log_dir.mkdir(exist_ok=True)
+
+# Nome file log = nome script + .log
+log_file = log_dir / f"{timestamp}.log"
+
+# ───── Reindirizza stdout e stderr ─────
+logger = Logger(str(log_file))
+sys.stdout = logger
+sys.stderr = logger
+
+# ───── Gestore globale per eccezioni ─────
+sys.excepthook = handle_exception
 
 NUM_CORES = 8
 
 current_time = datetime.now().strftime("%H:%M:%S")
 print("Current time: " + current_time)
 
-base_dir = Path(__file__).parent
-goodwares_path = (base_dir.parent / "resources" / "goodware_dataset").resolve()
-non_valid_goodwares_path = (base_dir.parent / "resources" / "non_valid_goodwares").resolve()
-malwares_path = (base_dir.parent / "resources" / "malware_dataset").resolve()
-non_valid_malwares_path = (base_dir.parent / "resources" / "non_valid_malwares").resolve()
+base_dir = Path(__file__).parents[2]
+goodwares_path = (base_dir / "resources" / "goodware_dataset").resolve()
+non_valid_goodwares_path = (base_dir / "resources" / "non_valid_goodwares").resolve()
+malwares_path = (base_dir / "resources" / "malware_dataset").resolve()
+non_valid_malwares_path = (base_dir / "resources" / "non_valid_malwares").resolve()
 
 
 # Creazione delle liste di bytecodes binari
@@ -26,7 +69,7 @@ malware_bytecodes = collect_bytecodes(str(malwares_path), str(non_valid_malwares
 for i in range(2, 51):
 
     start = time.time()
-    filterDivisibleIndexKernel = DivisibleIndexKernel(block_size=i)
+    filterDivisibleIndexKernel = DivisibleIndexKernel(mod=i)
 
     def filter(b):
         result = filterDivisibleIndexKernel(b)
@@ -34,13 +77,11 @@ for i in range(2, 51):
         return result
 
     # Filtraggio dei bytecodes
-    goodware_bytecodes_filtered_with_Divisible_Index_Kernel = []
     goodware_bytecodes_filtered_with_Divisible_Index_Kernel = Parallel(n_jobs=NUM_CORES)(
         delayed(filter)(b) for b in goodware_bytecodes
     )
 
     # Filtraggio dei bytecodes
-    malware_bytecodes_filtered_with_Divisible_Index_Kernel = []
     malware_bytecodes_filtered_with_Divisible_Index_Kernel = Parallel(n_jobs=NUM_CORES)(
         delayed(filter)(b) for b in malware_bytecodes
     )
@@ -63,7 +104,7 @@ for i in range(2, 51):
     goodware_bytecodes_filtered_with_Divisible_Index_Kernel.clear()
     malware_bytecodes_filtered_with_Divisible_Index_Kernel.clear()
 
-    print("Filtered with filter Divisible Index Kernel with block_size " + str(i))
+    print("Filtered with filter Divisible Index Kernel with parameter: mod = " + str(i))
     executeSVM(goodware_bytecodes_filtered_with_Divisible_Index_Kernel_zero_padding, malware_bytecodes_filtered_with_Divisible_Index_Kernel_zero_padding)
 
     goodware_bytecodes_filtered_with_Divisible_Index_Kernel_zero_padding.clear()
