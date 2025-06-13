@@ -131,10 +131,8 @@ def executeSVM(goodwares, malwares, epochs=50, lr=0.1, patience=5):
     #X_mal , y_mal  = load_dataset_from_bytecodes(malwares, 1, NUM_CORES)
 
     X_good, y_good = load_dataset_memmap(goodwares, 0, "./mmap", "good", NUM_CORES)
-    print("0")
     X_mal, y_mal = load_dataset_memmap(malwares, 1, "./mmap", "mal", NUM_CORES)
 
-    print("1")
     # ---------------------------
     # 1. Combinazione dei dati
     # ---------------------------
@@ -143,16 +141,12 @@ def executeSVM(goodwares, malwares, epochs=50, lr=0.1, patience=5):
     #X = np.concatenate((X_good, X_mal), axis=0).astype(np.float32)
     X = concat_memmaps(X_good, X_mal, "./mmap/all_float32.dat",
                        dtype=np.float32, chunk=32)
-    print("2")
     #y_np = np.hstack(y_good + y_mal).astype(np.int64)  # shape (N,)
     y_np = np.concatenate((y_good, y_mal), axis=0).astype(np.int64)
-    print("3")
 
     # da 0/1 a -1/+1 (lo SVM con hinge loss lo preferisce)
     #y_np[y_np == 0] = -1
     y_np[y_np == 0] = -1
-
-    print("4")
 
     # ---------------------------
     # 2. Train / test split
@@ -166,8 +160,6 @@ def executeSVM(goodwares, malwares, epochs=50, lr=0.1, patience=5):
         random_state=42,
         stratify=y_np
     )
-
-    print("5")
 
     # ---------------------------
     # 4. DataLoader

@@ -65,8 +65,8 @@ non_valid_malwares_path = (base_dir / "resources" / "non_valid_malwares").resolv
 goodware_bytecodes = collect_bytecodes(str(goodwares_path), str(non_valid_goodwares_path))
 malware_bytecodes = collect_bytecodes(str(malwares_path), str(non_valid_malwares_path))
 
-for i in range(3, 51):
-    for j in range(2, 51):
+for i in range(3, 51, 5):
+    for j in range(2, 51, 5):
         if (i > j):
             start = time.time()
             blockPosKernel = BlockPosKernel(block_size=i, pos=j)

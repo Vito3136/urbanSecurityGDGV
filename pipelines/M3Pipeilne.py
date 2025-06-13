@@ -7,6 +7,7 @@ base_path = Path(__file__).resolve().parents[1] / "src" / "SVM"
 
 # Percorsi manuali degli script da eseguire
 scripts = [
+    base_path / "1_StrideKernel.py",
     base_path / "2_PrimeIndexKernel.py",
     base_path / "4_CheckerboardKernel.py",
     base_path / "7_BlockPosKernel.py",

@@ -1,0 +1,537 @@
+Current time: 15:40:32
+Filtered with filter Checkerboard Kernel with parameter: block_size = 4
+Epoch 01 | loss inf | val acc 51.15%
+Epoch 02 | loss inf | val acc 51.33%
+Epoch 03 | loss inf | val acc 53.82%
+Epoch 04 | loss inf | val acc 52.87%
+Epoch 05 | loss inf | val acc 51.45%
+Epoch 06 | loss inf | val acc 52.22%
+Epoch 07 | loss inf | val acc 53.11%
+Epoch 08 | loss inf | val acc 58.56%
+Epoch 09 | loss inf | val acc 54.41%
+Epoch 10 | loss inf | val acc 55.89%
+Epoch 11 | loss inf | val acc 60.57%
+Epoch 12 | loss inf | val acc 60.63%
+Epoch 13 | loss inf | val acc 54.11%
+Epoch 14 | loss inf | val acc 54.53%
+Epoch 15 | loss inf | val acc 57.96%
+Epoch 16 | loss inf | val acc 57.79%
+Epoch 17 | loss inf | val acc 67.14%
+Epoch 18 | loss inf | val acc 56.42%
+Epoch 19 | loss inf | val acc 59.03%
+Epoch 20 | loss inf | val acc 54.06%
+Epoch 21 | loss inf | val acc 54.53%
+Epoch 22 | loss inf | val acc 53.46%
+
+Early stop at epoch 22. Best val acc: 67.14%
+
+Accuracy: 0.6714031971580817
+              precision    recall  f1-score   support
+
+    Goodware       0.61      0.88      0.72       814
+     Malware       0.81      0.47      0.60       875
+
+    accuracy                           0.67      1689
+   macro avg       0.71      0.68      0.66      1689
+weighted avg       0.72      0.67      0.66      1689
+
+Time taken: 20.82 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 8
+Epoch 01 | loss inf | val acc 51.63%
+Epoch 02 | loss inf | val acc 52.87%
+Epoch 03 | loss inf | val acc 53.82%
+Epoch 04 | loss inf | val acc 55.48%
+Epoch 05 | loss inf | val acc 54.65%
+Epoch 06 | loss inf | val acc 53.05%
+Epoch 07 | loss inf | val acc 54.35%
+Epoch 08 | loss inf | val acc 59.38%
+Epoch 09 | loss inf | val acc 55.77%
+Epoch 10 | loss inf | val acc 54.06%
+Epoch 11 | loss inf | val acc 55.48%
+Epoch 12 | loss inf | val acc 54.83%
+Epoch 13 | loss inf | val acc 54.59%
+
+Early stop at epoch 13. Best val acc: 59.38%
+
+Accuracy: 0.5938425103611604
+              precision    recall  f1-score   support
+
+    Goodware       0.88      0.18      0.30       814
+     Malware       0.56      0.98      0.71       875
+
+    accuracy                           0.59      1689
+   macro avg       0.72      0.58      0.51      1689
+weighted avg       0.72      0.59      0.52      1689
+
+Time taken: 13.54 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 12
+Epoch 01 | loss inf | val acc 49.38%
+Epoch 02 | loss inf | val acc 52.04%
+Epoch 03 | loss inf | val acc 59.56%
+Epoch 04 | loss inf | val acc 53.88%
+Epoch 05 | loss inf | val acc 53.76%
+Epoch 06 | loss inf | val acc 52.04%
+Epoch 07 | loss inf | val acc 54.06%
+Epoch 08 | loss inf | val acc 57.31%
+
+Early stop at epoch 8. Best val acc: 59.56%
+
+Accuracy: 0.5956187092954411
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.93      0.69       814
+     Malware       0.81      0.28      0.42       875
+
+    accuracy                           0.60      1689
+   macro avg       0.68      0.61      0.56      1689
+weighted avg       0.69      0.60      0.55      1689
+
+Time taken: 9.87 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 16
+Epoch 01 | loss inf | val acc 51.92%
+Epoch 02 | loss inf | val acc 50.80%
+Epoch 03 | loss inf | val acc 52.16%
+Epoch 04 | loss inf | val acc 53.64%
+Epoch 05 | loss inf | val acc 54.83%
+Epoch 06 | loss inf | val acc 61.57%
+Epoch 07 | loss inf | val acc 54.77%
+Epoch 08 | loss inf | val acc 54.41%
+Epoch 09 | loss inf | val acc 58.50%
+Epoch 10 | loss inf | val acc 55.71%
+Epoch 11 | loss inf | val acc 57.08%
+
+Early stop at epoch 11. Best val acc: 61.57%
+
+Accuracy: 0.6157489638839551
+              precision    recall  f1-score   support
+
+    Goodware       0.57      0.88      0.69       814
+     Malware       0.76      0.37      0.50       875
+
+    accuracy                           0.62      1689
+   macro avg       0.66      0.62      0.59      1689
+weighted avg       0.67      0.62      0.59      1689
+
+Time taken: 11.66 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 24
+Epoch 01 | loss inf | val acc 49.56%
+Epoch 02 | loss inf | val acc 63.11%
+Epoch 03 | loss inf | val acc 54.94%
+Epoch 04 | loss inf | val acc 51.69%
+Epoch 05 | loss inf | val acc 54.47%
+Epoch 06 | loss inf | val acc 52.81%
+Epoch 07 | loss inf | val acc 53.76%
+
+Early stop at epoch 7. Best val acc: 63.11%
+
+Accuracy: 0.6311426879810539
+              precision    recall  f1-score   support
+
+    Goodware       0.70      0.41      0.52       814
+     Malware       0.60      0.84      0.70       875
+
+    accuracy                           0.63      1689
+   macro avg       0.65      0.62      0.61      1689
+weighted avg       0.65      0.63      0.61      1689
+
+Time taken: 9.88 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 28
+Epoch 01 | loss inf | val acc 50.33%
+Epoch 02 | loss inf | val acc 51.21%
+Epoch 03 | loss inf | val acc 53.23%
+Epoch 04 | loss inf | val acc 59.92%
+Epoch 05 | loss inf | val acc 60.86%
+Epoch 06 | loss inf | val acc 56.96%
+Epoch 07 | loss inf | val acc 52.87%
+Epoch 08 | loss inf | val acc 64.77%
+Epoch 09 | loss inf | val acc 54.65%
+Epoch 10 | loss inf | val acc 53.11%
+Epoch 11 | loss inf | val acc 54.59%
+Epoch 12 | loss inf | val acc 71.40%
+Epoch 13 | loss inf | val acc 58.85%
+Epoch 14 | loss inf | val acc 52.22%
+Epoch 15 | loss inf | val acc 58.02%
+Epoch 16 | loss inf | val acc 56.66%
+Epoch 17 | loss inf | val acc 58.02%
+
+Early stop at epoch 17. Best val acc: 71.40%
+
+Accuracy: 0.7140319715808171
+              precision    recall  f1-score   support
+
+    Goodware       0.70      0.71      0.70       814
+     Malware       0.73      0.72      0.72       875
+
+    accuracy                           0.71      1689
+   macro avg       0.71      0.71      0.71      1689
+weighted avg       0.71      0.71      0.71      1689
+
+Time taken: 17.81 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 32
+Epoch 01 | loss inf | val acc 51.69%
+Epoch 02 | loss inf | val acc 58.20%
+Epoch 03 | loss inf | val acc 52.75%
+Epoch 04 | loss inf | val acc 58.08%
+Epoch 05 | loss inf | val acc 66.67%
+Epoch 06 | loss inf | val acc 57.37%
+Epoch 07 | loss inf | val acc 64.95%
+Epoch 08 | loss inf | val acc 54.71%
+Epoch 09 | loss inf | val acc 52.75%
+Epoch 10 | loss inf | val acc 54.83%
+
+Early stop at epoch 10. Best val acc: 66.67%
+
+Accuracy: 0.6666666666666666
+              precision    recall  f1-score   support
+
+    Goodware       0.65      0.68      0.66       814
+     Malware       0.69      0.66      0.67       875
+
+    accuracy                           0.67      1689
+   macro avg       0.67      0.67      0.67      1689
+weighted avg       0.67      0.67      0.67      1689
+
+Time taken: 11.52 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 36
+Epoch 01 | loss inf | val acc 51.27%
+Epoch 02 | loss inf | val acc 52.87%
+Epoch 03 | loss inf | val acc 61.22%
+Epoch 04 | loss inf | val acc 54.23%
+Epoch 05 | loss inf | val acc 53.52%
+Epoch 06 | loss inf | val acc 58.38%
+Epoch 07 | loss inf | val acc 51.63%
+Epoch 08 | loss inf | val acc 56.42%
+
+Early stop at epoch 8. Best val acc: 61.22%
+
+Accuracy: 0.6121965660153937
+              precision    recall  f1-score   support
+
+    Goodware       0.74      0.30      0.43       814
+     Malware       0.58      0.90      0.71       875
+
+    accuracy                           0.61      1689
+   macro avg       0.66      0.60      0.57      1689
+weighted avg       0.66      0.61      0.57      1689
+
+Time taken: 10.37 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 44
+Epoch 01 | loss inf | val acc 52.40%
+Epoch 02 | loss inf | val acc 54.88%
+Epoch 03 | loss inf | val acc 50.33%
+Epoch 04 | loss inf | val acc 52.16%
+Epoch 05 | loss inf | val acc 55.00%
+Epoch 06 | loss inf | val acc 52.16%
+Epoch 07 | loss inf | val acc 54.17%
+Epoch 08 | loss inf | val acc 52.28%
+Epoch 09 | loss inf | val acc 55.71%
+Epoch 10 | loss inf | val acc 52.63%
+Epoch 11 | loss inf | val acc 52.87%
+Epoch 12 | loss inf | val acc 52.34%
+Epoch 13 | loss inf | val acc 53.88%
+Epoch 14 | loss inf | val acc 53.94%
+
+Early stop at epoch 14. Best val acc: 55.71%
+
+Accuracy: 0.5571343990526939
+              precision    recall  f1-score   support
+
+    Goodware       0.52      0.97      0.68       814
+     Malware       0.85      0.18      0.29       875
+
+    accuracy                           0.56      1689
+   macro avg       0.69      0.57      0.48      1689
+weighted avg       0.69      0.56      0.48      1689
+
+Time taken: 13.96 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 48
+Epoch 01 | loss inf | val acc 53.11%
+Epoch 02 | loss inf | val acc 59.92%
+Epoch 03 | loss inf | val acc 51.27%
+Epoch 04 | loss inf | val acc 52.75%
+Epoch 05 | loss inf | val acc 54.94%
+Epoch 06 | loss inf | val acc 54.23%
+Epoch 07 | loss inf | val acc 52.46%
+
+Early stop at epoch 7. Best val acc: 59.92%
+
+Accuracy: 0.5991711071640023
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.89      0.68       814
+     Malware       0.77      0.33      0.46       875
+
+    accuracy                           0.60      1689
+   macro avg       0.66      0.61      0.57      1689
+weighted avg       0.66      0.60      0.57      1689
+
+Time taken: 9.18 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 52
+Epoch 01 | loss inf | val acc 51.98%
+Epoch 02 | loss inf | val acc 56.54%
+Epoch 03 | loss inf | val acc 57.67%
+Epoch 04 | loss inf | val acc 53.94%
+Epoch 05 | loss inf | val acc 54.06%
+Epoch 06 | loss inf | val acc 54.71%
+Epoch 07 | loss inf | val acc 56.31%
+Epoch 08 | loss inf | val acc 54.35%
+
+Early stop at epoch 8. Best val acc: 57.67%
+
+Accuracy: 0.5766725873297809
+              precision    recall  f1-score   support
+
+    Goodware       0.68      0.23      0.35       814
+     Malware       0.56      0.90      0.69       875
+
+    accuracy                           0.58      1689
+   macro avg       0.62      0.56      0.52      1689
+weighted avg       0.61      0.58      0.52      1689
+
+Time taken: 10.23 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 56
+Epoch 01 | loss inf | val acc 51.51%
+Epoch 02 | loss inf | val acc 54.23%
+Epoch 03 | loss inf | val acc 56.54%
+Epoch 04 | loss inf | val acc 54.06%
+Epoch 05 | loss inf | val acc 55.71%
+Epoch 06 | loss inf | val acc 53.76%
+Epoch 07 | loss inf | val acc 53.11%
+Epoch 08 | loss inf | val acc 59.80%
+Epoch 09 | loss inf | val acc 52.28%
+Epoch 10 | loss inf | val acc 56.48%
+Epoch 11 | loss inf | val acc 52.10%
+Epoch 12 | loss inf | val acc 58.97%
+Epoch 13 | loss inf | val acc 57.61%
+
+Early stop at epoch 13. Best val acc: 59.80%
+
+Accuracy: 0.5979869745411486
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.93      0.69       814
+     Malware       0.82      0.29      0.42       875
+
+    accuracy                           0.60      1689
+   macro avg       0.69      0.61      0.56      1689
+weighted avg       0.69      0.60      0.55      1689
+
+Time taken: 14.95 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 64
+Epoch 01 | loss inf | val acc 51.63%
+Epoch 02 | loss inf | val acc 54.41%
+Epoch 03 | loss inf | val acc 60.33%
+Epoch 04 | loss inf | val acc 54.35%
+Epoch 05 | loss inf | val acc 54.47%
+Epoch 06 | loss inf | val acc 54.41%
+Epoch 07 | loss inf | val acc 65.90%
+Epoch 08 | loss inf | val acc 58.38%
+Epoch 09 | loss inf | val acc 51.98%
+Epoch 10 | loss inf | val acc 54.23%
+Epoch 11 | loss inf | val acc 62.17%
+Epoch 12 | loss inf | val acc 54.59%
+
+Early stop at epoch 12. Best val acc: 65.90%
+
+Accuracy: 0.6589698046181173
+              precision    recall  f1-score   support
+
+    Goodware       0.82      0.37      0.51       814
+     Malware       0.61      0.92      0.74       875
+
+    accuracy                           0.66      1689
+   macro avg       0.72      0.65      0.63      1689
+weighted avg       0.71      0.66      0.63      1689
+
+Time taken: 12.90 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 68
+Epoch 01 | loss inf | val acc 51.57%
+Epoch 02 | loss inf | val acc 51.10%
+Epoch 03 | loss inf | val acc 53.35%
+Epoch 04 | loss inf | val acc 54.35%
+Epoch 05 | loss inf | val acc 52.34%
+Epoch 06 | loss inf | val acc 54.29%
+Epoch 07 | loss inf | val acc 65.48%
+Epoch 08 | loss inf | val acc 53.94%
+Epoch 09 | loss inf | val acc 52.58%
+Epoch 10 | loss inf | val acc 54.29%
+Epoch 11 | loss inf | val acc 53.82%
+Epoch 12 | loss inf | val acc 62.11%
+
+Early stop at epoch 12. Best val acc: 65.48%
+
+Accuracy: 0.6548253404381291
+              precision    recall  f1-score   support
+
+    Goodware       0.73      0.46      0.56       814
+     Malware       0.62      0.84      0.72       875
+
+    accuracy                           0.65      1689
+   macro avg       0.67      0.65      0.64      1689
+weighted avg       0.67      0.65      0.64      1689
+
+Time taken: 13.24 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 72
+Epoch 01 | loss inf | val acc 54.23%
+Epoch 02 | loss inf | val acc 49.91%
+Epoch 03 | loss inf | val acc 53.35%
+Epoch 04 | loss inf | val acc 58.50%
+Epoch 05 | loss inf | val acc 52.40%
+Epoch 06 | loss inf | val acc 56.13%
+Epoch 07 | loss inf | val acc 55.36%
+Epoch 08 | loss inf | val acc 61.99%
+Epoch 09 | loss inf | val acc 52.28%
+Epoch 10 | loss inf | val acc 54.17%
+Epoch 11 | loss inf | val acc 58.38%
+Epoch 12 | loss inf | val acc 56.25%
+Epoch 13 | loss inf | val acc 52.58%
+
+Early stop at epoch 13. Best val acc: 61.99%
+
+Accuracy: 0.6198934280639432
+              precision    recall  f1-score   support
+
+    Goodware       0.57      0.88      0.69       814
+     Malware       0.77      0.38      0.51       875
+
+    accuracy                           0.62      1689
+   macro avg       0.67      0.63      0.60      1689
+weighted avg       0.67      0.62      0.60      1689
+
+Time taken: 14.00 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 76
+Epoch 01 | loss inf | val acc 52.93%
+Epoch 02 | loss inf | val acc 53.11%
+Epoch 03 | loss inf | val acc 60.92%
+Epoch 04 | loss inf | val acc 54.11%
+Epoch 05 | loss inf | val acc 55.12%
+Epoch 06 | loss inf | val acc 53.11%
+Epoch 07 | loss inf | val acc 56.60%
+Epoch 08 | loss inf | val acc 54.65%
+
+Early stop at epoch 8. Best val acc: 60.92%
+
+Accuracy: 0.6092362344582594
+              precision    recall  f1-score   support
+
+    Goodware       0.82      0.24      0.38       814
+     Malware       0.57      0.95      0.72       875
+
+    accuracy                           0.61      1689
+   macro avg       0.70      0.60      0.55      1689
+weighted avg       0.69      0.61      0.55      1689
+
+Time taken: 10.53 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 84
+Epoch 01 | loss inf | val acc 51.92%
+Epoch 02 | loss inf | val acc 53.40%
+Epoch 03 | loss inf | val acc 59.98%
+Epoch 04 | loss inf | val acc 60.15%
+Epoch 05 | loss inf | val acc 53.58%
+Epoch 06 | loss inf | val acc 54.00%
+Epoch 07 | loss inf | val acc 59.38%
+Epoch 08 | loss inf | val acc 54.59%
+Epoch 09 | loss inf | val acc 54.35%
+
+Early stop at epoch 9. Best val acc: 60.15%
+
+Accuracy: 0.6015393724097099
+              precision    recall  f1-score   support
+
+    Goodware       0.81      0.23      0.35       814
+     Malware       0.57      0.95      0.71       875
+
+    accuracy                           0.60      1689
+   macro avg       0.69      0.59      0.53      1689
+weighted avg       0.68      0.60      0.54      1689
+
+Time taken: 11.59 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 88
+Epoch 01 | loss inf | val acc 51.15%
+Epoch 02 | loss inf | val acc 51.81%
+Epoch 03 | loss inf | val acc 51.27%
+Epoch 04 | loss inf | val acc 59.56%
+Epoch 05 | loss inf | val acc 56.36%
+Epoch 06 | loss inf | val acc 54.11%
+Epoch 07 | loss inf | val acc 51.51%
+Epoch 08 | loss inf | val acc 54.35%
+Epoch 09 | loss inf | val acc 59.74%
+Epoch 10 | loss inf | val acc 54.29%
+Epoch 11 | loss inf | val acc 57.13%
+Epoch 12 | loss inf | val acc 58.61%
+Epoch 13 | loss inf | val acc 63.88%
+Epoch 14 | loss inf | val acc 62.82%
+Epoch 15 | loss inf | val acc 55.00%
+Epoch 16 | loss inf | val acc 58.20%
+Epoch 17 | loss inf | val acc 59.56%
+Epoch 18 | loss inf | val acc 54.65%
+
+Early stop at epoch 18. Best val acc: 63.88%
+
+Accuracy: 0.6388395500296034
+              precision    recall  f1-score   support
+
+    Goodware       0.88      0.29      0.44       814
+     Malware       0.59      0.96      0.73       875
+
+    accuracy                           0.64      1689
+   macro avg       0.74      0.63      0.59      1689
+weighted avg       0.73      0.64      0.59      1689
+
+Time taken: 18.81 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 92
+Epoch 01 | loss inf | val acc 52.16%
+Epoch 02 | loss inf | val acc 51.45%
+Epoch 03 | loss inf | val acc 53.40%
+Epoch 04 | loss inf | val acc 53.29%
+Epoch 05 | loss inf | val acc 60.92%
+Epoch 06 | loss inf | val acc 55.30%
+Epoch 07 | loss inf | val acc 54.53%
+Epoch 08 | loss inf | val acc 59.62%
+Epoch 09 | loss inf | val acc 59.33%
+Epoch 10 | loss inf | val acc 64.30%
+Epoch 11 | loss inf | val acc 67.91%
+Epoch 12 | loss inf | val acc 54.00%
+Epoch 13 | loss inf | val acc 61.22%
+Epoch 14 | loss inf | val acc 55.89%
+Epoch 15 | loss inf | val acc 54.94%
+Epoch 16 | loss inf | val acc 56.13%
+
+Early stop at epoch 16. Best val acc: 67.91%
+
+Accuracy: 0.6791000592066312
+              precision    recall  f1-score   support
+
+    Goodware       0.63      0.83      0.71       814
+     Malware       0.77      0.54      0.63       875
+
+    accuracy                           0.68      1689
+   macro avg       0.70      0.68      0.67      1689
+weighted avg       0.70      0.68      0.67      1689
+
+Time taken: 19.05 minutes
+Filtered with filter Checkerboard Kernel with parameter: block_size = 96
+Epoch 01 | loss inf | val acc 48.19%
+Epoch 02 | loss inf | val acc 56.31%
+Epoch 03 | loss inf | val acc 52.40%
+Epoch 04 | loss inf | val acc 52.40%
+Epoch 05 | loss inf | val acc 60.51%
+Epoch 06 | loss inf | val acc 51.69%
+Epoch 07 | loss inf | val acc 59.15%
+Epoch 08 | loss inf | val acc 56.01%
+Epoch 09 | loss inf | val acc 57.02%
+Epoch 10 | loss inf | val acc 57.25%
+
+Early stop at epoch 10. Best val acc: 60.51%
+
+Accuracy: 0.6050917702782712
+              precision    recall  f1-score   support
+
+    Goodware       0.56      0.91      0.69       814
+     Malware       0.79      0.32      0.46       875
+
+    accuracy                           0.61      1689
+   macro avg       0.67      0.62      0.57      1689
+weighted avg       0.68      0.61      0.57      1689
+
+Time taken: 12.12 minutes

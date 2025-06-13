@@ -62,12 +62,12 @@ malwares_path = (base_dir / "resources" / "malware_dataset").resolve()
 non_valid_malwares_path = (base_dir / "resources" / "non_valid_malwares").resolve()
 
 
-# Creazione delle liste di bytecodes binari
+# Creating binary bytecode lists
 goodware_bytecodes = collect_bytecodes(str(goodwares_path), str(non_valid_goodwares_path))
 malware_bytecodes = collect_bytecodes(str(malwares_path), str(non_valid_malwares_path))
 
-for i in range(1, 51):
-    for j in range(1, 51):
+for i in range(1, 27, 4):
+    for j in range(1, 27, 4):
         if (i != j):
             start = time.time()
             filterZigZagKernel = ZigZagKernel(on_a=i, off_b=j)
@@ -77,12 +77,12 @@ for i in range(1, 51):
                 gc.collect()
                 return result
 
-            # Filtraggio dei bytecodes
+            # Bytecodes filtering
             goodware_bytecodes_filtered_with_Zig_Zag_Kernel = Parallel(n_jobs=NUM_CORES)(
                 delayed(filter)(b) for b in goodware_bytecodes
             )
 
-            # Filtraggio dei bytecodes
+            # Bytecodes filtering
             malware_bytecodes_filtered_with_Zig_Zag_Kernel = Parallel(n_jobs=NUM_CORES)(
                 delayed(filter)(b) for b in malware_bytecodes
             )

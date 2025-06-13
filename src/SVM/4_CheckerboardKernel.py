@@ -66,7 +66,7 @@ non_valid_malwares_path = (base_dir / "resources" / "non_valid_malwares").resolv
 goodware_bytecodes = collect_bytecodes(str(goodwares_path), str(non_valid_goodwares_path))
 malware_bytecodes = collect_bytecodes(str(malwares_path), str(non_valid_malwares_path))
 
-for i in range(4, 101, 2):
+for i in range(4, 101, 4):
     if (i % 10 != 0):
 
         start = time.time()
