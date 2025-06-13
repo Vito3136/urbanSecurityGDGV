@@ -1,0 +1,1107 @@
+Current time: 20:47:56
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 1 off_b = 5
+Epoch 01 | loss inf | val acc 51.39%
+Epoch 02 | loss inf | val acc 52.28%
+Epoch 03 | loss inf | val acc 51.63%
+Epoch 04 | loss inf | val acc 54.94%
+Epoch 05 | loss inf | val acc 51.87%
+Epoch 06 | loss inf | val acc 54.83%
+Epoch 07 | loss inf | val acc 52.10%
+Epoch 08 | loss inf | val acc 55.42%
+Epoch 09 | loss inf | val acc 58.85%
+Epoch 10 | loss inf | val acc 55.60%
+Epoch 11 | loss inf | val acc 69.21%
+Epoch 12 | loss inf | val acc 61.28%
+Epoch 13 | loss inf | val acc 61.28%
+Epoch 14 | loss inf | val acc 55.00%
+Epoch 15 | loss inf | val acc 60.81%
+Epoch 16 | loss inf | val acc 55.95%
+
+Early stop at epoch 16. Best val acc: 69.21%
+
+Accuracy: 0.6921255180580225
+              precision    recall  f1-score   support
+
+    Goodware       0.76      0.52      0.62       814
+     Malware       0.66      0.85      0.74       875
+
+    accuracy                           0.69      1689
+   macro avg       0.71      0.69      0.68      1689
+weighted avg       0.71      0.69      0.68      1689
+
+Time taken: 23.00 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 1 off_b = 9
+Epoch 01 | loss inf | val acc 51.92%
+Epoch 02 | loss inf | val acc 56.48%
+Epoch 03 | loss inf | val acc 58.02%
+Epoch 04 | loss inf | val acc 64.00%
+Epoch 05 | loss inf | val acc 53.40%
+Epoch 06 | loss inf | val acc 51.92%
+Epoch 07 | loss inf | val acc 55.95%
+Epoch 08 | loss inf | val acc 52.10%
+Epoch 09 | loss inf | val acc 54.47%
+
+Early stop at epoch 9. Best val acc: 64.00%
+
+Accuracy: 0.6400236826524571
+              precision    recall  f1-score   support
+
+    Goodware       0.78      0.35      0.48       814
+     Malware       0.60      0.91      0.72       875
+
+    accuracy                           0.64      1689
+   macro avg       0.69      0.63      0.60      1689
+weighted avg       0.69      0.64      0.61      1689
+
+Time taken: 15.50 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 1 off_b = 13
+Epoch 01 | loss inf | val acc 54.88%
+Epoch 02 | loss inf | val acc 53.64%
+Epoch 03 | loss inf | val acc 53.58%
+Epoch 04 | loss inf | val acc 59.15%
+Epoch 05 | loss inf | val acc 54.00%
+Epoch 06 | loss inf | val acc 62.52%
+Epoch 07 | loss inf | val acc 61.28%
+Epoch 08 | loss inf | val acc 52.04%
+Epoch 09 | loss inf | val acc 54.29%
+Epoch 10 | loss inf | val acc 66.07%
+Epoch 11 | loss inf | val acc 54.17%
+Epoch 12 | loss inf | val acc 67.32%
+Epoch 13 | loss inf | val acc 67.73%
+Epoch 14 | loss inf | val acc 65.96%
+Epoch 15 | loss inf | val acc 56.07%
+Epoch 16 | loss inf | val acc 59.44%
+Epoch 17 | loss inf | val acc 57.67%
+Epoch 18 | loss inf | val acc 55.42%
+
+Early stop at epoch 18. Best val acc: 67.73%
+
+Accuracy: 0.6773238602723505
+              precision    recall  f1-score   support
+
+    Goodware       0.63      0.82      0.71       814
+     Malware       0.76      0.55      0.64       875
+
+    accuracy                           0.68      1689
+   macro avg       0.70      0.68      0.67      1689
+weighted avg       0.70      0.68      0.67      1689
+
+Time taken: 24.71 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 1 off_b = 17
+Epoch 01 | loss inf | val acc 51.04%
+Epoch 02 | loss inf | val acc 51.39%
+Epoch 03 | loss inf | val acc 58.14%
+Epoch 04 | loss inf | val acc 53.94%
+Epoch 05 | loss inf | val acc 56.25%
+Epoch 06 | loss inf | val acc 53.17%
+Epoch 07 | loss inf | val acc 54.59%
+Epoch 08 | loss inf | val acc 53.46%
+
+Early stop at epoch 8. Best val acc: 58.14%
+
+Accuracy: 0.581409117821196
+              precision    recall  f1-score   support
+
+    Goodware       0.54      0.96      0.69       814
+     Malware       0.85      0.23      0.36       875
+
+    accuracy                           0.58      1689
+   macro avg       0.69      0.59      0.53      1689
+weighted avg       0.70      0.58      0.52      1689
+
+Time taken: 14.43 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 2 off_b = 1
+Epoch 01 | loss inf | val acc 51.81%
+Epoch 02 | loss inf | val acc 55.60%
+Epoch 03 | loss inf | val acc 52.87%
+Epoch 04 | loss inf | val acc 51.27%
+Epoch 05 | loss inf | val acc 54.23%
+Epoch 06 | loss inf | val acc 53.64%
+Epoch 07 | loss inf | val acc 54.71%
+
+Early stop at epoch 7. Best val acc: 55.60%
+
+Accuracy: 0.5559502664298401
+              precision    recall  f1-score   support
+
+    Goodware       0.52      0.95      0.67       814
+     Malware       0.81      0.19      0.30       875
+
+    accuracy                           0.56      1689
+   macro avg       0.66      0.57      0.49      1689
+weighted avg       0.67      0.56      0.48      1689
+
+Time taken: 12.88 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 2 off_b = 5
+Epoch 01 | loss inf | val acc 52.81%
+Epoch 02 | loss inf | val acc 51.39%
+Epoch 03 | loss inf | val acc 51.21%
+Epoch 04 | loss inf | val acc 59.33%
+Epoch 05 | loss inf | val acc 63.88%
+Epoch 06 | loss inf | val acc 55.00%
+Epoch 07 | loss inf | val acc 53.40%
+Epoch 08 | loss inf | val acc 60.92%
+Epoch 09 | loss inf | val acc 59.27%
+Epoch 10 | loss inf | val acc 55.24%
+
+Early stop at epoch 10. Best val acc: 63.88%
+
+Accuracy: 0.6388395500296034
+              precision    recall  f1-score   support
+
+    Goodware       0.74      0.38      0.51       814
+     Malware       0.60      0.88      0.72       875
+
+    accuracy                           0.64      1689
+   macro avg       0.67      0.63      0.61      1689
+weighted avg       0.67      0.64      0.61      1689
+
+Time taken: 16.17 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 2 off_b = 9
+Epoch 01 | loss inf | val acc 51.39%
+Epoch 02 | loss inf | val acc 53.76%
+Epoch 03 | loss inf | val acc 63.47%
+Epoch 04 | loss inf | val acc 60.21%
+Epoch 05 | loss inf | val acc 52.22%
+Epoch 06 | loss inf | val acc 54.35%
+Epoch 07 | loss inf | val acc 56.48%
+Epoch 08 | loss inf | val acc 57.49%
+
+Early stop at epoch 8. Best val acc: 63.47%
+
+Accuracy: 0.6346950858496152
+              precision    recall  f1-score   support
+
+    Goodware       0.71      0.40      0.52       814
+     Malware       0.61      0.85      0.71       875
+
+    accuracy                           0.63      1689
+   macro avg       0.66      0.63      0.61      1689
+weighted avg       0.66      0.63      0.61      1689
+
+Time taken: 13.84 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 2 off_b = 13
+Epoch 01 | loss inf | val acc 50.98%
+Epoch 02 | loss inf | val acc 55.24%
+Epoch 03 | loss inf | val acc 50.56%
+Epoch 04 | loss inf | val acc 64.24%
+Epoch 05 | loss inf | val acc 53.52%
+Epoch 06 | loss inf | val acc 51.63%
+Epoch 07 | loss inf | val acc 58.20%
+Epoch 08 | loss inf | val acc 51.69%
+Epoch 09 | loss inf | val acc 54.23%
+
+Early stop at epoch 9. Best val acc: 64.24%
+
+Accuracy: 0.6423919478981646
+              precision    recall  f1-score   support
+
+    Goodware       0.72      0.42      0.53       814
+     Malware       0.61      0.85      0.71       875
+
+    accuracy                           0.64      1689
+   macro avg       0.67      0.63      0.62      1689
+weighted avg       0.67      0.64      0.62      1689
+
+Time taken: 15.23 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 2 off_b = 17
+Epoch 01 | loss inf | val acc 51.57%
+Epoch 02 | loss inf | val acc 51.27%
+Epoch 03 | loss inf | val acc 55.83%
+Epoch 04 | loss inf | val acc 63.35%
+Epoch 05 | loss inf | val acc 55.95%
+Epoch 06 | loss inf | val acc 55.60%
+Epoch 07 | loss inf | val acc 56.13%
+Epoch 08 | loss inf | val acc 53.94%
+Epoch 09 | loss inf | val acc 53.40%
+
+Early stop at epoch 9. Best val acc: 63.35%
+
+Accuracy: 0.6335109532267614
+              precision    recall  f1-score   support
+
+    Goodware       0.73      0.38      0.50       814
+     Malware       0.60      0.87      0.71       875
+
+    accuracy                           0.63      1689
+   macro avg       0.67      0.62      0.60      1689
+weighted avg       0.66      0.63      0.61      1689
+
+Time taken: 14.77 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 6 off_b = 1
+Epoch 01 | loss inf | val acc 52.22%
+Epoch 02 | loss inf | val acc 51.15%
+Epoch 03 | loss inf | val acc 52.81%
+Epoch 04 | loss inf | val acc 55.36%
+Epoch 05 | loss inf | val acc 54.94%
+Epoch 06 | loss inf | val acc 54.00%
+Epoch 07 | loss inf | val acc 51.21%
+Epoch 08 | loss inf | val acc 56.72%
+Epoch 09 | loss inf | val acc 54.35%
+Epoch 10 | loss inf | val acc 67.61%
+Epoch 11 | loss inf | val acc 54.41%
+Epoch 12 | loss inf | val acc 54.00%
+Epoch 13 | loss inf | val acc 55.89%
+Epoch 14 | loss inf | val acc 70.34%
+Epoch 15 | loss inf | val acc 54.94%
+Epoch 16 | loss inf | val acc 56.78%
+Epoch 17 | loss inf | val acc 54.29%
+Epoch 18 | loss inf | val acc 55.24%
+Epoch 19 | loss inf | val acc 54.77%
+
+Early stop at epoch 19. Best val acc: 70.34%
+
+Accuracy: 0.7033747779751333
+              precision    recall  f1-score   support
+
+    Goodware       0.85      0.47      0.60       814
+     Malware       0.65      0.92      0.76       875
+
+    accuracy                           0.70      1689
+   macro avg       0.75      0.70      0.68      1689
+weighted avg       0.75      0.70      0.69      1689
+
+Time taken: 25.96 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 6 off_b = 5
+Epoch 01 | loss inf | val acc 54.41%
+Epoch 02 | loss inf | val acc 51.27%
+Epoch 03 | loss inf | val acc 52.40%
+Epoch 04 | loss inf | val acc 53.40%
+Epoch 05 | loss inf | val acc 57.13%
+Epoch 06 | loss inf | val acc 60.69%
+Epoch 07 | loss inf | val acc 57.43%
+Epoch 08 | loss inf | val acc 54.11%
+Epoch 09 | loss inf | val acc 65.01%
+Epoch 10 | loss inf | val acc 61.69%
+Epoch 11 | loss inf | val acc 58.14%
+Epoch 12 | loss inf | val acc 57.79%
+Epoch 13 | loss inf | val acc 57.08%
+Epoch 14 | loss inf | val acc 59.74%
+
+Early stop at epoch 14. Best val acc: 65.01%
+
+Accuracy: 0.650088809946714
+              precision    recall  f1-score   support
+
+    Goodware       0.86      0.33      0.47       814
+     Malware       0.60      0.95      0.74       875
+
+    accuracy                           0.65      1689
+   macro avg       0.73      0.64      0.61      1689
+weighted avg       0.73      0.65      0.61      1689
+
+Time taken: 21.11 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 6 off_b = 9
+Epoch 01 | loss inf | val acc 54.88%
+Epoch 02 | loss inf | val acc 51.15%
+Epoch 03 | loss inf | val acc 61.28%
+Epoch 04 | loss inf | val acc 51.45%
+Epoch 05 | loss inf | val acc 61.46%
+Epoch 06 | loss inf | val acc 51.63%
+Epoch 07 | loss inf | val acc 63.41%
+Epoch 08 | loss inf | val acc 56.25%
+Epoch 09 | loss inf | val acc 53.11%
+Epoch 10 | loss inf | val acc 61.75%
+Epoch 11 | loss inf | val acc 52.52%
+Epoch 12 | loss inf | val acc 56.84%
+
+Early stop at epoch 12. Best val acc: 63.41%
+
+Accuracy: 0.6341030195381883
+              precision    recall  f1-score   support
+
+    Goodware       0.82      0.31      0.45       814
+     Malware       0.59      0.94      0.73       875
+
+    accuracy                           0.63      1689
+   macro avg       0.71      0.62      0.59      1689
+weighted avg       0.70      0.63      0.59      1689
+
+Time taken: 20.61 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 6 off_b = 13
+Epoch 01 | loss inf | val acc 51.27%
+Epoch 02 | loss inf | val acc 52.75%
+Epoch 03 | loss inf | val acc 51.81%
+Epoch 04 | loss inf | val acc 55.77%
+Epoch 05 | loss inf | val acc 59.15%
+Epoch 06 | loss inf | val acc 57.19%
+Epoch 07 | loss inf | val acc 60.86%
+Epoch 08 | loss inf | val acc 54.29%
+Epoch 09 | loss inf | val acc 64.95%
+Epoch 10 | loss inf | val acc 57.96%
+Epoch 11 | loss inf | val acc 59.62%
+Epoch 12 | loss inf | val acc 54.83%
+Epoch 13 | loss inf | val acc 61.63%
+Epoch 14 | loss inf | val acc 66.07%
+Epoch 15 | loss inf | val acc 55.24%
+Epoch 16 | loss inf | val acc 67.97%
+Epoch 17 | loss inf | val acc 64.42%
+Epoch 18 | loss inf | val acc 54.65%
+Epoch 19 | loss inf | val acc 61.81%
+Epoch 20 | loss inf | val acc 66.49%
+Epoch 21 | loss inf | val acc 53.58%
+
+Early stop at epoch 21. Best val acc: 67.97%
+
+Accuracy: 0.679692125518058
+              precision    recall  f1-score   support
+
+    Goodware       0.62      0.86      0.72       814
+     Malware       0.80      0.51      0.62       875
+
+    accuracy                           0.68      1689
+   macro avg       0.71      0.69      0.67      1689
+weighted avg       0.71      0.68      0.67      1689
+
+Time taken: 30.40 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 6 off_b = 17
+Epoch 01 | loss inf | val acc 51.33%
+Epoch 02 | loss inf | val acc 60.04%
+Epoch 03 | loss inf | val acc 56.01%
+Epoch 04 | loss inf | val acc 58.38%
+Epoch 05 | loss inf | val acc 53.58%
+Epoch 06 | loss inf | val acc 57.25%
+Epoch 07 | loss inf | val acc 63.53%
+Epoch 08 | loss inf | val acc 54.00%
+Epoch 09 | loss inf | val acc 53.58%
+Epoch 10 | loss inf | val acc 57.31%
+Epoch 11 | loss inf | val acc 56.48%
+Epoch 12 | loss inf | val acc 55.30%
+
+Early stop at epoch 12. Best val acc: 63.53%
+
+Accuracy: 0.635287152161042
+              precision    recall  f1-score   support
+
+    Goodware       0.79      0.33      0.46       814
+     Malware       0.60      0.92      0.72       875
+
+    accuracy                           0.64      1689
+   macro avg       0.70      0.62      0.59      1689
+weighted avg       0.69      0.64      0.60      1689
+
+Time taken: 19.55 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 10 off_b = 1
+Epoch 01 | loss inf | val acc 48.19%
+Epoch 02 | loss inf | val acc 57.61%
+Epoch 03 | loss inf | val acc 61.04%
+Epoch 04 | loss inf | val acc 66.02%
+Epoch 05 | loss inf | val acc 53.88%
+Epoch 06 | loss inf | val acc 54.83%
+Epoch 07 | loss inf | val acc 56.36%
+Epoch 08 | loss inf | val acc 61.87%
+Epoch 09 | loss inf | val acc 54.11%
+
+Early stop at epoch 9. Best val acc: 66.02%
+
+Accuracy: 0.6601539372409709
+              precision    recall  f1-score   support
+
+    Goodware       0.65      0.65      0.65       814
+     Malware       0.67      0.67      0.67       875
+
+    accuracy                           0.66      1689
+   macro avg       0.66      0.66      0.66      1689
+weighted avg       0.66      0.66      0.66      1689
+
+Time taken: 15.19 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 10 off_b = 5
+Epoch 01 | loss inf | val acc 51.33%
+Epoch 02 | loss inf | val acc 51.39%
+Epoch 03 | loss inf | val acc 53.46%
+Epoch 04 | loss inf | val acc 59.50%
+Epoch 05 | loss inf | val acc 57.37%
+Epoch 06 | loss inf | val acc 56.36%
+Epoch 07 | loss inf | val acc 53.76%
+Epoch 08 | loss inf | val acc 55.48%
+Epoch 09 | loss inf | val acc 58.50%
+
+Early stop at epoch 9. Best val acc: 59.50%
+
+Accuracy: 0.5950266429840142
+              precision    recall  f1-score   support
+
+    Goodware       0.69      0.29      0.41       814
+     Malware       0.57      0.88      0.69       875
+
+    accuracy                           0.60      1689
+   macro avg       0.63      0.58      0.55      1689
+weighted avg       0.63      0.60      0.56      1689
+
+Time taken: 28.85 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 10 off_b = 9
+Epoch 01 | loss inf | val acc 56.25%
+Epoch 02 | loss inf | val acc 51.21%
+Epoch 03 | loss inf | val acc 52.04%
+Epoch 04 | loss inf | val acc 61.75%
+Epoch 05 | loss inf | val acc 60.86%
+Epoch 06 | loss inf | val acc 67.32%
+Epoch 07 | loss inf | val acc 52.04%
+Epoch 08 | loss inf | val acc 54.23%
+Epoch 09 | loss inf | val acc 61.28%
+Epoch 10 | loss inf | val acc 61.10%
+Epoch 11 | loss inf | val acc 52.34%
+
+Early stop at epoch 11. Best val acc: 67.32%
+
+Accuracy: 0.6731793960923623
+              precision    recall  f1-score   support
+
+    Goodware       0.67      0.63      0.65       814
+     Malware       0.68      0.71      0.69       875
+
+    accuracy                           0.67      1689
+   macro avg       0.67      0.67      0.67      1689
+weighted avg       0.67      0.67      0.67      1689
+
+Time taken: 17.86 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 10 off_b = 13
+Epoch 01 | loss inf | val acc 51.57%
+Epoch 02 | loss inf | val acc 51.33%
+Epoch 03 | loss inf | val acc 53.76%
+Epoch 04 | loss inf | val acc 65.19%
+Epoch 05 | loss inf | val acc 54.00%
+Epoch 06 | loss inf | val acc 53.70%
+Epoch 07 | loss inf | val acc 53.11%
+Epoch 08 | loss inf | val acc 58.38%
+Epoch 09 | loss inf | val acc 55.83%
+
+Early stop at epoch 9. Best val acc: 65.19%
+
+Accuracy: 0.6518650088809946
+              precision    recall  f1-score   support
+
+    Goodware       0.65      0.60      0.62       814
+     Malware       0.65      0.70      0.68       875
+
+    accuracy                           0.65      1689
+   macro avg       0.65      0.65      0.65      1689
+weighted avg       0.65      0.65      0.65      1689
+
+Time taken: 14.97 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 10 off_b = 17
+Epoch 01 | loss inf | val acc 55.42%
+Epoch 02 | loss inf | val acc 51.15%
+Epoch 03 | loss inf | val acc 61.28%
+Epoch 04 | loss inf | val acc 54.65%
+Epoch 05 | loss inf | val acc 60.92%
+Epoch 06 | loss inf | val acc 66.55%
+Epoch 07 | loss inf | val acc 58.73%
+Epoch 08 | loss inf | val acc 61.28%
+Epoch 09 | loss inf | val acc 54.17%
+Epoch 10 | loss inf | val acc 54.88%
+Epoch 11 | loss inf | val acc 61.75%
+
+Early stop at epoch 11. Best val acc: 66.55%
+
+Accuracy: 0.6654825340438129
+              precision    recall  f1-score   support
+
+    Goodware       0.68      0.58      0.63       814
+     Malware       0.66      0.74      0.70       875
+
+    accuracy                           0.67      1689
+   macro avg       0.67      0.66      0.66      1689
+weighted avg       0.67      0.67      0.66      1689
+
+Time taken: 18.52 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 14 off_b = 1
+Epoch 01 | loss inf | val acc 51.33%
+Epoch 02 | loss inf | val acc 62.05%
+Epoch 03 | loss inf | val acc 55.77%
+Epoch 04 | loss inf | val acc 52.69%
+Epoch 05 | loss inf | val acc 51.39%
+Epoch 06 | loss inf | val acc 54.83%
+Epoch 07 | loss inf | val acc 64.65%
+Epoch 08 | loss inf | val acc 57.79%
+Epoch 09 | loss inf | val acc 52.87%
+Epoch 10 | loss inf | val acc 64.24%
+Epoch 11 | loss inf | val acc 57.73%
+Epoch 12 | loss inf | val acc 54.83%
+
+Early stop at epoch 12. Best val acc: 64.65%
+
+Accuracy: 0.6465364120781527
+              precision    recall  f1-score   support
+
+    Goodware       0.79      0.36      0.50       814
+     Malware       0.61      0.91      0.73       875
+
+    accuracy                           0.65      1689
+   macro avg       0.70      0.64      0.61      1689
+weighted avg       0.70      0.65      0.62      1689
+
+Time taken: 19.36 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 14 off_b = 5
+Epoch 01 | loss inf | val acc 58.91%
+Epoch 02 | loss inf | val acc 52.99%
+Epoch 03 | loss inf | val acc 53.94%
+Epoch 04 | loss inf | val acc 63.59%
+Epoch 05 | loss inf | val acc 60.04%
+Epoch 06 | loss inf | val acc 67.02%
+Epoch 07 | loss inf | val acc 61.22%
+Epoch 08 | loss inf | val acc 58.85%
+Epoch 09 | loss inf | val acc 55.65%
+Epoch 10 | loss inf | val acc 62.76%
+Epoch 11 | loss inf | val acc 54.06%
+
+Early stop at epoch 11. Best val acc: 67.02%
+
+Accuracy: 0.670219064535228
+              precision    recall  f1-score   support
+
+    Goodware       0.73      0.50      0.59       814
+     Malware       0.64      0.83      0.72       875
+
+    accuracy                           0.67      1689
+   macro avg       0.69      0.66      0.66      1689
+weighted avg       0.68      0.67      0.66      1689
+
+Time taken: 18.94 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 14 off_b = 9
+Epoch 01 | loss inf | val acc 49.50%
+Epoch 02 | loss inf | val acc 52.04%
+Epoch 03 | loss inf | val acc 52.58%
+Epoch 04 | loss inf | val acc 61.81%
+Epoch 05 | loss inf | val acc 54.23%
+Epoch 06 | loss inf | val acc 53.58%
+Epoch 07 | loss inf | val acc 56.78%
+Epoch 08 | loss inf | val acc 52.81%
+Epoch 09 | loss inf | val acc 60.51%
+
+Early stop at epoch 9. Best val acc: 61.81%
+
+Accuracy: 0.6181172291296625
+              precision    recall  f1-score   support
+
+    Goodware       0.72      0.34      0.46       814
+     Malware       0.59      0.87      0.70       875
+
+    accuracy                           0.62      1689
+   macro avg       0.65      0.61      0.58      1689
+weighted avg       0.65      0.62      0.59      1689
+
+Time taken: 15.82 minutes
+Filtered with filter Zig Zag Kernel with parameters: on_a = 14 off_b = 13
+Epoch 01 | loss inf | val acc 51.81%
+Epoch 02 | loss inf | val acc 51.21%
+Epoch 03 | loss inf | val acc 54.11%
+Epoch 04 | loss inf | val acc 52.58%
+Epoch 05 | loss inf | val acc 61.28%
+Epoch 06 | loss inf | val acc 53.23%
+Epoch 07 | loss inf | val acc 64.65%
+Epoch 08 | loss inf | val acc 51.92%
+Epoch 09 | loss inf | val acc 55.18%
+Epoch 10 | loss inf | val acc 57.73%
+Epoch 11 | loss inf | val acc 55.06%
+Epoch 12 | loss inf | val acc 54.88%
+
+Early stop at epoch 12. Best val acc: 64.65%
+
+Accuracy: 0.6465364120781527
+              precision    recall  f1-score   support
+
+    Goodware       0.59      0.84      0.70       814
+     Malware       0.76      0.46      0.58       875
+
+    accuracy                           0.65      1689
+   macro avg       0.68      0.65      0.64      1689
+weighted avg       0.68      0.65      0.63      1689
+
+Time taken: 18.77 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 14 off_b = 17
+Epoch 01 | loss inf | val acc 58.61%
+Epoch 02 | loss inf | val acc 53.40%
+Epoch 03 | loss inf | val acc 54.17%
+Epoch 04 | loss inf | val acc 55.65%
+Epoch 05 | loss inf | val acc 56.25%
+Epoch 06 | loss inf | val acc 53.52%
+
+Early stop at epoch 6. Best val acc: 58.61%
+
+Accuracy: 0.5861456483126111
+              precision    recall  f1-score   support
+
+    Goodware       0.54      0.86      0.67       814
+     Malware       0.72      0.33      0.45       875
+
+    accuracy                           0.59      1689
+   macro avg       0.63      0.60      0.56      1689
+weighted avg       0.63      0.59      0.56      1689
+
+Time taken: 8.31 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 18 off_b = 1
+Epoch 01 | loss inf | val acc 49.85%
+Epoch 02 | loss inf | val acc 51.51%
+Epoch 03 | loss inf | val acc 55.00%
+Epoch 04 | loss inf | val acc 54.71%
+Epoch 05 | loss inf | val acc 60.92%
+Epoch 06 | loss inf | val acc 52.87%
+Epoch 07 | loss inf | val acc 61.22%
+Epoch 08 | loss inf | val acc 56.42%
+Epoch 09 | loss inf | val acc 54.41%
+Epoch 10 | loss inf | val acc 63.17%
+Epoch 11 | loss inf | val acc 60.45%
+Epoch 12 | loss inf | val acc 58.02%
+Epoch 13 | loss inf | val acc 64.12%
+Epoch 14 | loss inf | val acc 52.16%
+Epoch 15 | loss inf | val acc 54.11%
+Epoch 16 | loss inf | val acc 61.40%
+Epoch 17 | loss inf | val acc 55.65%
+Epoch 18 | loss inf | val acc 53.64%
+
+Early stop at epoch 18. Best val acc: 64.12%
+
+Accuracy: 0.6412078152753108
+              precision    recall  f1-score   support
+
+    Goodware       0.58      0.91      0.71       814
+     Malware       0.82      0.39      0.53       875
+
+    accuracy                           0.64      1689
+   macro avg       0.70      0.65      0.62      1689
+weighted avg       0.71      0.64      0.62      1689
+
+Time taken: 19.43 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 18 off_b = 5
+Epoch 01 | loss inf | val acc 52.10%
+Epoch 02 | loss inf | val acc 52.75%
+Epoch 03 | loss inf | val acc 56.42%
+Epoch 04 | loss inf | val acc 54.06%
+Epoch 05 | loss inf | val acc 57.61%
+Epoch 06 | loss inf | val acc 53.46%
+Epoch 07 | loss inf | val acc 51.69%
+Epoch 08 | loss inf | val acc 57.67%
+Epoch 09 | loss inf | val acc 53.58%
+Epoch 10 | loss inf | val acc 58.26%
+Epoch 11 | loss inf | val acc 53.29%
+Epoch 12 | loss inf | val acc 56.01%
+Epoch 13 | loss inf | val acc 59.09%
+Epoch 14 | loss inf | val acc 54.06%
+Epoch 15 | loss inf | val acc 55.95%
+Epoch 16 | loss inf | val acc 52.99%
+Epoch 17 | loss inf | val acc 56.66%
+Epoch 18 | loss inf | val acc 58.02%
+
+Early stop at epoch 18. Best val acc: 59.09%
+
+Accuracy: 0.590882178804026
+              precision    recall  f1-score   support
+
+    Goodware       0.90      0.17      0.29       814
+     Malware       0.56      0.98      0.71       875
+
+    accuracy                           0.59      1689
+   macro avg       0.73      0.58      0.50      1689
+weighted avg       0.72      0.59      0.51      1689
+
+Time taken: 18.41 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 18 off_b = 9
+Epoch 01 | loss inf | val acc 51.57%
+Epoch 02 | loss inf | val acc 51.45%
+Epoch 03 | loss inf | val acc 53.58%
+Epoch 04 | loss inf | val acc 61.99%
+Epoch 05 | loss inf | val acc 54.47%
+Epoch 06 | loss inf | val acc 54.23%
+Epoch 07 | loss inf | val acc 51.98%
+Epoch 08 | loss inf | val acc 62.82%
+Epoch 09 | loss inf | val acc 53.94%
+Epoch 10 | loss inf | val acc 63.71%
+Epoch 11 | loss inf | val acc 54.41%
+Epoch 12 | loss inf | val acc 67.20%
+Epoch 13 | loss inf | val acc 64.24%
+Epoch 14 | loss inf | val acc 56.01%
+Epoch 15 | loss inf | val acc 58.20%
+Epoch 16 | loss inf | val acc 52.10%
+Epoch 17 | loss inf | val acc 55.65%
+
+Early stop at epoch 17. Best val acc: 67.20%
+
+Accuracy: 0.6719952634695086
+              precision    recall  f1-score   support
+
+    Goodware       0.87      0.38      0.52       814
+     Malware       0.62      0.95      0.75       875
+
+    accuracy                           0.67      1689
+   macro avg       0.74      0.66      0.64      1689
+weighted avg       0.74      0.67      0.64      1689
+
+Time taken: 18.00 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 18 off_b = 13
+Epoch 01 | loss inf | val acc 51.33%
+Epoch 02 | loss inf | val acc 54.71%
+Epoch 03 | loss inf | val acc 53.64%
+Epoch 04 | loss inf | val acc 54.00%
+Epoch 05 | loss inf | val acc 53.70%
+Epoch 06 | loss inf | val acc 52.04%
+Epoch 07 | loss inf | val acc 55.54%
+Epoch 08 | loss inf | val acc 53.70%
+Epoch 09 | loss inf | val acc 64.36%
+Epoch 10 | loss inf | val acc 52.46%
+Epoch 11 | loss inf | val acc 61.75%
+Epoch 12 | loss inf | val acc 55.18%
+Epoch 13 | loss inf | val acc 55.06%
+Epoch 14 | loss inf | val acc 63.65%
+
+Early stop at epoch 14. Best val acc: 64.36%
+
+Accuracy: 0.6435760805210183
+              precision    recall  f1-score   support
+
+    Goodware       0.59      0.85      0.70       814
+     Malware       0.77      0.45      0.57       875
+
+    accuracy                           0.64      1689
+   macro avg       0.68      0.65      0.63      1689
+weighted avg       0.68      0.64      0.63      1689
+
+Time taken: 16.11 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 18 off_b = 17
+Epoch 01 | loss inf | val acc 49.38%
+Epoch 02 | loss inf | val acc 59.09%
+Epoch 03 | loss inf | val acc 52.87%
+Epoch 04 | loss inf | val acc 54.47%
+Epoch 05 | loss inf | val acc 52.87%
+Epoch 06 | loss inf | val acc 53.82%
+Epoch 07 | loss inf | val acc 55.24%
+
+Early stop at epoch 7. Best val acc: 59.09%
+
+Accuracy: 0.590882178804026
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.90      0.68       814
+     Malware       0.77      0.30      0.43       875
+
+    accuracy                           0.59      1689
+   macro avg       0.66      0.60      0.56      1689
+weighted avg       0.66      0.59      0.55      1689
+
+Time taken: 10.51 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 22 off_b = 1
+Epoch 01 | loss inf | val acc 51.04%
+Epoch 02 | loss inf | val acc 51.15%
+Epoch 03 | loss inf | val acc 53.52%
+Epoch 04 | loss inf | val acc 52.75%
+Epoch 05 | loss inf | val acc 51.69%
+Epoch 06 | loss inf | val acc 54.11%
+Epoch 07 | loss inf | val acc 51.92%
+Epoch 08 | loss inf | val acc 54.53%
+Epoch 09 | loss inf | val acc 56.25%
+Epoch 10 | loss inf | val acc 54.11%
+Epoch 11 | loss inf | val acc 58.79%
+Epoch 12 | loss inf | val acc 54.17%
+Epoch 13 | loss inf | val acc 61.16%
+Epoch 14 | loss inf | val acc 60.27%
+Epoch 15 | loss inf | val acc 53.05%
+Epoch 16 | loss inf | val acc 61.22%
+Epoch 17 | loss inf | val acc 55.65%
+Epoch 18 | loss inf | val acc 55.30%
+Epoch 19 | loss inf | val acc 59.86%
+Epoch 20 | loss inf | val acc 57.08%
+Epoch 21 | loss inf | val acc 56.66%
+
+Early stop at epoch 21. Best val acc: 61.22%
+
+Accuracy: 0.6121965660153937
+              precision    recall  f1-score   support
+
+    Goodware       0.56      0.93      0.70       814
+     Malware       0.82      0.32      0.46       875
+
+    accuracy                           0.61      1689
+   macro avg       0.69      0.62      0.58      1689
+weighted avg       0.70      0.61      0.57      1689
+
+Time taken: 20.00 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 22 off_b = 5
+Epoch 01 | loss inf | val acc 53.58%
+Epoch 02 | loss inf | val acc 54.11%
+Epoch 03 | loss inf | val acc 53.52%
+Epoch 04 | loss inf | val acc 55.65%
+Epoch 05 | loss inf | val acc 54.53%
+Epoch 06 | loss inf | val acc 61.28%
+Epoch 07 | loss inf | val acc 66.37%
+Epoch 08 | loss inf | val acc 62.11%
+Epoch 09 | loss inf | val acc 52.34%
+Epoch 10 | loss inf | val acc 55.00%
+Epoch 11 | loss inf | val acc 52.10%
+Epoch 12 | loss inf | val acc 57.55%
+
+Early stop at epoch 12. Best val acc: 66.37%
+
+Accuracy: 0.6637063351095323
+              precision    recall  f1-score   support
+
+    Goodware       0.74      0.46      0.57       814
+     Malware       0.63      0.85      0.72       875
+
+    accuracy                           0.66      1689
+   macro avg       0.69      0.66      0.65      1689
+weighted avg       0.68      0.66      0.65      1689
+
+Time taken: 13.60 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 22 off_b = 9
+Epoch 01 | loss inf | val acc 51.92%
+Epoch 02 | loss inf | val acc 53.40%
+Epoch 03 | loss inf | val acc 51.04%
+Epoch 04 | loss inf | val acc 51.57%
+Epoch 05 | loss inf | val acc 52.87%
+Epoch 06 | loss inf | val acc 51.81%
+Epoch 07 | loss inf | val acc 54.65%
+Epoch 08 | loss inf | val acc 52.04%
+Epoch 09 | loss inf | val acc 51.45%
+Epoch 10 | loss inf | val acc 54.00%
+Epoch 11 | loss inf | val acc 64.00%
+Epoch 12 | loss inf | val acc 69.92%
+Epoch 13 | loss inf | val acc 56.07%
+Epoch 14 | loss inf | val acc 68.92%
+Epoch 15 | loss inf | val acc 55.30%
+Epoch 16 | loss inf | val acc 54.47%
+Epoch 17 | loss inf | val acc 56.48%
+
+Early stop at epoch 17. Best val acc: 69.92%
+
+Accuracy: 0.6992303137951451
+              precision    recall  f1-score   support
+
+    Goodware       0.85      0.46      0.59       814
+     Malware       0.65      0.93      0.76       875
+
+    accuracy                           0.70      1689
+   macro avg       0.75      0.69      0.68      1689
+weighted avg       0.74      0.70      0.68      1689
+
+Time taken: 16.64 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 22 off_b = 13
+Epoch 01 | loss inf | val acc 51.27%
+Epoch 02 | loss inf | val acc 56.13%
+Epoch 03 | loss inf | val acc 55.54%
+Epoch 04 | loss inf | val acc 53.17%
+Epoch 05 | loss inf | val acc 54.83%
+Epoch 06 | loss inf | val acc 57.13%
+Epoch 07 | loss inf | val acc 53.29%
+Epoch 08 | loss inf | val acc 54.47%
+Epoch 09 | loss inf | val acc 61.16%
+Epoch 10 | loss inf | val acc 60.92%
+Epoch 11 | loss inf | val acc 54.65%
+Epoch 12 | loss inf | val acc 54.35%
+Epoch 13 | loss inf | val acc 63.88%
+Epoch 14 | loss inf | val acc 54.77%
+Epoch 15 | loss inf | val acc 54.35%
+Epoch 16 | loss inf | val acc 67.50%
+Epoch 17 | loss inf | val acc 54.29%
+Epoch 18 | loss inf | val acc 52.93%
+Epoch 19 | loss inf | val acc 72.88%
+Epoch 20 | loss inf | val acc 61.81%
+Epoch 21 | loss inf | val acc 61.04%
+Epoch 22 | loss inf | val acc 63.77%
+Epoch 23 | loss inf | val acc 55.06%
+Epoch 24 | loss inf | val acc 59.15%
+
+Early stop at epoch 24. Best val acc: 72.88%
+
+Accuracy: 0.7288336293664891
+              precision    recall  f1-score   support
+
+    Goodware       0.87      0.51      0.65       814
+     Malware       0.67      0.93      0.78       875
+
+    accuracy                           0.73      1689
+   macro avg       0.77      0.72      0.71      1689
+weighted avg       0.77      0.73      0.72      1689
+
+Time taken: 23.79 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 22 off_b = 17
+Epoch 01 | loss inf | val acc 51.81%
+Epoch 02 | loss inf | val acc 51.75%
+Epoch 03 | loss inf | val acc 54.71%
+Epoch 04 | loss inf | val acc 52.10%
+Epoch 05 | loss inf | val acc 61.57%
+Epoch 06 | loss inf | val acc 55.60%
+Epoch 07 | loss inf | val acc 54.29%
+Epoch 08 | loss inf | val acc 56.90%
+Epoch 09 | loss inf | val acc 65.19%
+Epoch 10 | loss inf | val acc 57.02%
+Epoch 11 | loss inf | val acc 53.05%
+Epoch 12 | loss inf | val acc 57.79%
+Epoch 13 | loss inf | val acc 58.02%
+Epoch 14 | loss inf | val acc 60.75%
+
+Early stop at epoch 14. Best val acc: 65.19%
+
+Accuracy: 0.6518650088809946
+              precision    recall  f1-score   support
+
+    Goodware       0.86      0.33      0.48       814
+     Malware       0.60      0.95      0.74       875
+
+    accuracy                           0.65      1689
+   macro avg       0.73      0.64      0.61      1689
+weighted avg       0.73      0.65      0.61      1689
+
+Time taken: 15.99 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 26 off_b = 1
+Epoch 01 | loss inf | val acc 54.59%
+Epoch 02 | loss inf | val acc 51.39%
+Epoch 03 | loss inf | val acc 51.51%
+Epoch 04 | loss inf | val acc 53.05%
+Epoch 05 | loss inf | val acc 59.86%
+Epoch 06 | loss inf | val acc 53.46%
+Epoch 07 | loss inf | val acc 52.99%
+Epoch 08 | loss inf | val acc 54.35%
+Epoch 09 | loss inf | val acc 58.97%
+Epoch 10 | loss inf | val acc 65.72%
+Epoch 11 | loss inf | val acc 52.04%
+Epoch 12 | loss inf | val acc 56.96%
+Epoch 13 | loss inf | val acc 58.97%
+Epoch 14 | loss inf | val acc 57.49%
+Epoch 15 | loss inf | val acc 52.40%
+
+Early stop at epoch 15. Best val acc: 65.72%
+
+Accuracy: 0.6571936056838366
+              precision    recall  f1-score   support
+
+    Goodware       0.60      0.88      0.71       814
+     Malware       0.80      0.45      0.57       875
+
+    accuracy                           0.66      1689
+   macro avg       0.70      0.67      0.64      1689
+weighted avg       0.70      0.66      0.64      1689
+
+Time taken: 16.63 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 26 off_b = 5
+Epoch 01 | loss inf | val acc 49.67%
+Epoch 02 | loss inf | val acc 51.21%
+Epoch 03 | loss inf | val acc 50.74%
+Epoch 04 | loss inf | val acc 53.76%
+Epoch 05 | loss inf | val acc 61.99%
+Epoch 06 | loss inf | val acc 56.60%
+Epoch 07 | loss inf | val acc 56.66%
+Epoch 08 | loss inf | val acc 53.94%
+Epoch 09 | loss inf | val acc 52.40%
+Epoch 10 | loss inf | val acc 54.23%
+
+Early stop at epoch 10. Best val acc: 61.99%
+
+Accuracy: 0.6198934280639432
+              precision    recall  f1-score   support
+
+    Goodware       0.78      0.29      0.43       814
+     Malware       0.58      0.92      0.72       875
+
+    accuracy                           0.62      1689
+   macro avg       0.68      0.61      0.57      1689
+weighted avg       0.68      0.62      0.58      1689
+
+Time taken: 12.14 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 26 off_b = 9
+Epoch 01 | loss inf | val acc 53.82%
+Epoch 02 | loss inf | val acc 50.44%
+Epoch 03 | loss inf | val acc 55.42%
+Epoch 04 | loss inf | val acc 58.79%
+Epoch 05 | loss inf | val acc 51.51%
+Epoch 06 | loss inf | val acc 58.73%
+Epoch 07 | loss inf | val acc 55.83%
+Epoch 08 | loss inf | val acc 54.11%
+Epoch 09 | loss inf | val acc 66.55%
+Epoch 10 | loss inf | val acc 55.36%
+Epoch 11 | loss inf | val acc 52.63%
+Epoch 12 | loss inf | val acc 54.47%
+Epoch 13 | loss inf | val acc 59.15%
+Epoch 14 | loss inf | val acc 65.42%
+
+Early stop at epoch 14. Best val acc: 66.55%
+
+Accuracy: 0.6654825340438129
+              precision    recall  f1-score   support
+
+    Goodware       0.84      0.38      0.52       814
+     Malware       0.62      0.93      0.74       875
+
+    accuracy                           0.67      1689
+   macro avg       0.73      0.66      0.63      1689
+weighted avg       0.72      0.67      0.64      1689
+
+Time taken: 15.47 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 26 off_b = 13
+Epoch 01 | loss inf | val acc 50.80%
+Epoch 02 | loss inf | val acc 51.51%
+Epoch 03 | loss inf | val acc 60.63%
+Epoch 04 | loss inf | val acc 54.17%
+Epoch 05 | loss inf | val acc 54.23%
+Epoch 06 | loss inf | val acc 51.45%
+Epoch 07 | loss inf | val acc 59.38%
+Epoch 08 | loss inf | val acc 66.79%
+Epoch 09 | loss inf | val acc 55.00%
+Epoch 10 | loss inf | val acc 52.04%
+Epoch 11 | loss inf | val acc 55.24%
+Epoch 12 | loss inf | val acc 56.84%
+Epoch 13 | loss inf | val acc 55.30%
+
+Early stop at epoch 13. Best val acc: 66.79%
+
+Accuracy: 0.6678507992895204
+              precision    recall  f1-score   support
+
+    Goodware       0.80      0.42      0.55       814
+     Malware       0.62      0.90      0.74       875
+
+    accuracy                           0.67      1689
+   macro avg       0.71      0.66      0.64      1689
+weighted avg       0.71      0.67      0.65      1689
+
+Time taken: 13.93 minutes
+
+Filtered with filter Zig Zag Kernel with parameters: on_a = 26 off_b = 17
+Epoch 01 | loss inf | val acc 51.27%
+Epoch 02 | loss inf | val acc 51.39%
+Epoch 03 | loss inf | val acc 51.39%
+Epoch 04 | loss inf | val acc 51.51%
+Epoch 05 | loss inf | val acc 56.25%
+Epoch 06 | loss inf | val acc 61.69%
+Epoch 07 | loss inf | val acc 64.12%
+Epoch 08 | loss inf | val acc 55.12%
+Epoch 09 | loss inf | val acc 66.43%
+Epoch 10 | loss inf | val acc 56.54%
+Epoch 11 | loss inf | val acc 54.17%
+Epoch 12 | loss inf | val acc 56.42%
+Epoch 13 | loss inf | val acc 56.60%
+Epoch 14 | loss inf | val acc 60.63%
+
+Early stop at epoch 14. Best val acc: 66.43%
+
+Accuracy: 0.6642984014209592
+              precision    recall  f1-score   support
+
+    Goodware       0.85      0.37      0.51       814
+     Malware       0.62      0.94      0.74       875
+
+    accuracy                           0.66      1689
+   macro avg       0.73      0.65      0.63      1689
+weighted avg       0.73      0.66      0.63      1689
+
+Time taken: 15.08 minutes

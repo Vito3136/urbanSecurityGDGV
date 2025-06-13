@@ -67,7 +67,7 @@ goodware_bytecodes = collect_bytecodes(str(goodwares_path), str(non_valid_goodwa
 malware_bytecodes = collect_bytecodes(str(malwares_path), str(non_valid_malwares_path))
 
 for i in range(1, 27, 4):
-    for j in range(1, 27, 4):
+    for j in range(1, 20, 4):
         if (i != j):
             start = time.time()
             filterZigZagKernel = ZigZagKernel(on_a=i, off_b=j)
