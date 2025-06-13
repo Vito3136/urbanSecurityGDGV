@@ -1,4 +1,5 @@
 Current time: 19:57:07
+
 Filtered with filter Reverse Tunnel Window Kernel
 Epoch 01 | loss inf | val acc 48.85%
 Epoch 02 | loss inf | val acc 53.35%

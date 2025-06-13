@@ -1,4 +1,5 @@
 Current time: 01:46:52
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 3 pos = 2
 Epoch 01 | loss inf | val acc 50.62%
 Epoch 02 | loss inf | val acc 51.15%
@@ -23,6 +24,7 @@ Accuracy: 0.6394316163410302
 weighted avg       0.66      0.64      0.62      1689
 
 Time taken: 6.44 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 8 pos = 2
 Epoch 01 | loss inf | val acc 50.56%
 Epoch 02 | loss inf | val acc 57.84%
@@ -45,6 +47,7 @@ Accuracy: 0.5784487862640616
 weighted avg       0.65      0.58      0.54      1689
 
 Time taken: 2.67 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 8 pos = 7
 Epoch 01 | loss inf | val acc 48.49%
 Epoch 02 | loss inf | val acc 55.00%
@@ -67,6 +70,7 @@ Accuracy: 0.5500296033155714
 weighted avg       0.65      0.55      0.44      1689
 
 Time taken: 2.54 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 13 pos = 2
 Epoch 01 | loss inf | val acc 51.63%
 Epoch 02 | loss inf | val acc 51.04%
@@ -90,6 +94,7 @@ Accuracy: 0.605683836589698
 weighted avg       0.65      0.61      0.58      1689
 
 Time taken: 2.14 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 13 pos = 7
 Epoch 01 | loss inf | val acc 49.67%
 Epoch 02 | loss inf | val acc 51.39%
@@ -124,6 +129,7 @@ Accuracy: 0.6589698046181173
 weighted avg       0.71      0.66      0.64      1689
 
 Time taken: 3.05 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 13 pos = 12
 Epoch 01 | loss inf | val acc 50.50%
 Epoch 02 | loss inf | val acc 53.40%
@@ -152,6 +158,7 @@ Accuracy: 0.6773238602723505
 weighted avg       0.70      0.68      0.67      1689
 
 Time taken: 2.64 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 18 pos = 2
 Epoch 01 | loss inf | val acc 50.27%
 Epoch 02 | loss inf | val acc 50.03%
@@ -178,6 +185,7 @@ Accuracy: 0.6003552397868561
 weighted avg       0.67      0.60      0.56      1689
 
 Time taken: 1.65 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 18 pos = 7
 Epoch 01 | loss inf | val acc 53.82%
 Epoch 02 | loss inf | val acc 51.98%
@@ -204,6 +212,7 @@ Accuracy: 0.6560094730609828
 weighted avg       0.66      0.66      0.65      1689
 
 Time taken: 1.87 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 18 pos = 12
 Epoch 01 | loss inf | val acc 54.00%
 Epoch 02 | loss inf | val acc 51.15%
@@ -227,6 +236,7 @@ Accuracy: 0.6471284783895797
 weighted avg       0.65      0.65      0.64      1689
 
 Time taken: 1.80 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 18 pos = 17
 Epoch 01 | loss inf | val acc 51.39%
 Epoch 02 | loss inf | val acc 50.80%
@@ -258,6 +268,7 @@ Accuracy: 0.6814683244523386
 weighted avg       0.73      0.68      0.66      1689
 
 Time taken: 1.92 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 23 pos = 2
 Epoch 01 | loss inf | val acc 51.75%
 Epoch 02 | loss inf | val acc 59.92%
@@ -284,6 +295,7 @@ Accuracy: 0.6127886323268206
 weighted avg       0.67      0.61      0.59      1689
 
 Time taken: 1.79 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 23 pos = 7
 Epoch 01 | loss inf | val acc 51.27%
 Epoch 02 | loss inf | val acc 54.71%
@@ -343,6 +355,7 @@ Accuracy: 0.7963291888691534
 weighted avg       0.80      0.80      0.80      1689
 
 Time taken: 2.02 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 23 pos = 12
 Epoch 01 | loss inf | val acc 51.57%
 Epoch 02 | loss inf | val acc 53.46%
@@ -369,6 +382,7 @@ Accuracy: 0.6222616933096506
 weighted avg       0.66      0.62      0.59      1689
 
 Time taken: 1.75 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 23 pos = 17
 Epoch 01 | loss inf | val acc 53.94%
 Epoch 02 | loss inf | val acc 51.21%
@@ -394,6 +408,7 @@ Accuracy: 0.6080521018354056
 weighted avg       0.71      0.61      0.54      1689
 
 Time taken: 1.77 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 23 pos = 22
 Epoch 01 | loss inf | val acc 50.74%
 Epoch 02 | loss inf | val acc 52.10%
@@ -417,6 +432,7 @@ Accuracy: 0.6441681468324453
 weighted avg       0.66      0.64      0.64      1689
 
 Time taken: 1.75 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 28 pos = 2
 Epoch 01 | loss inf | val acc 50.33%
 Epoch 02 | loss inf | val acc 54.53%
@@ -450,6 +466,7 @@ Accuracy: 0.6092362344582594
 weighted avg       0.71      0.61      0.57      1689
 
 Time taken: 1.75 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 28 pos = 7
 Epoch 01 | loss inf | val acc 51.21%
 Epoch 02 | loss inf | val acc 48.02%
@@ -482,6 +499,7 @@ Accuracy: 0.6459443457667259
 weighted avg       0.66      0.65      0.64      1689
 
 Time taken: 1.74 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 28 pos = 12
 Epoch 01 | loss inf | val acc 51.10%
 Epoch 02 | loss inf | val acc 55.65%
@@ -505,6 +523,7 @@ Accuracy: 0.5879218472468917
 weighted avg       0.60      0.59      0.56      1689
 
 Time taken: 1.69 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 28 pos = 17
 Epoch 01 | loss inf | val acc 48.37%
 Epoch 02 | loss inf | val acc 51.57%
@@ -537,6 +556,7 @@ Accuracy: 0.5902901124925992
 weighted avg       0.69      0.59      0.52      1689
 
 Time taken: 1.70 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 28 pos = 22
 Epoch 01 | loss inf | val acc 51.04%
 Epoch 02 | loss inf | val acc 50.03%
@@ -562,6 +582,7 @@ Accuracy: 0.6139727649496743
 weighted avg       0.65      0.61      0.58      1689
 
 Time taken: 1.64 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 28 pos = 27
 Epoch 01 | loss inf | val acc 51.21%
 Epoch 02 | loss inf | val acc 48.25%
@@ -587,6 +608,7 @@ Accuracy: 0.6305506216696269
 weighted avg       0.65      0.63      0.61      1689
 
 Time taken: 1.66 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 33 pos = 2
 Epoch 01 | loss inf | val acc 51.98%
 Epoch 02 | loss inf | val acc 55.18%
@@ -614,6 +636,7 @@ Accuracy: 0.6157489638839551
 weighted avg       0.68      0.62      0.59      1689
 
 Time taken: 1.67 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 33 pos = 7
 Epoch 01 | loss inf | val acc 52.58%
 Epoch 02 | loss inf | val acc 50.74%
@@ -642,6 +665,7 @@ Accuracy: 0.6423919478981646
 weighted avg       0.68      0.64      0.63      1689
 
 Time taken: 1.69 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 33 pos = 12
 Epoch 01 | loss inf | val acc 54.47%
 Epoch 02 | loss inf | val acc 60.92%
@@ -664,6 +688,7 @@ Accuracy: 0.6092362344582594
 weighted avg       0.64      0.61      0.58      1689
 
 Time taken: 1.77 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 33 pos = 17
 Epoch 01 | loss inf | val acc 49.79%
 Epoch 02 | loss inf | val acc 56.90%
@@ -690,6 +715,7 @@ Accuracy: 0.6791000592066312
 weighted avg       0.69      0.68      0.67      1689
 
 Time taken: 1.68 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 33 pos = 22
 Epoch 01 | loss inf | val acc 54.59%
 Epoch 02 | loss inf | val acc 57.37%
@@ -725,6 +751,7 @@ Accuracy: 0.6992303137951451
 weighted avg       0.76      0.70      0.68      1689
 
 Time taken: 1.69 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 33 pos = 27
 Epoch 01 | loss inf | val acc 51.33%
 Epoch 02 | loss inf | val acc 54.41%
@@ -751,6 +778,7 @@ Accuracy: 0.6743635287152161
 weighted avg       0.68      0.67      0.67      1689
 
 Time taken: 1.63 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 33 pos = 32
 Epoch 01 | loss inf | val acc 55.36%
 Epoch 02 | loss inf | val acc 59.80%
@@ -780,6 +808,7 @@ Accuracy: 0.6216696269982238
 weighted avg       0.71      0.62      0.57      1689
 
 Time taken: 1.65 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 2
 Epoch 01 | loss inf | val acc 49.97%
 Epoch 02 | loss inf | val acc 51.87%
@@ -818,6 +847,7 @@ Accuracy: 0.7418590882178804
 weighted avg       0.75      0.74      0.74      1689
 
 Time taken: 1.73 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 7
 Epoch 01 | loss inf | val acc 48.55%
 Epoch 02 | loss inf | val acc 51.15%
@@ -845,6 +875,7 @@ Accuracy: 0.6015393724097099
 weighted avg       0.64      0.60      0.58      1689
 
 Time taken: 1.68 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 12
 Epoch 01 | loss inf | val acc 50.38%
 Epoch 02 | loss inf | val acc 51.57%
@@ -876,6 +907,7 @@ Accuracy: 0.6086441681468324
 weighted avg       0.70      0.61      0.57      1689
 
 Time taken: 1.69 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 17
 Epoch 01 | loss inf | val acc 53.88%
 Epoch 02 | loss inf | val acc 53.40%
@@ -907,6 +939,7 @@ Accuracy: 0.6631142687981054
 weighted avg       0.71      0.66      0.64      1689
 
 Time taken: 1.68 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 22
 Epoch 01 | loss inf | val acc 51.04%
 Epoch 02 | loss inf | val acc 54.06%
@@ -937,6 +970,7 @@ Accuracy: 0.6690349319123742
 weighted avg       0.68      0.67      0.66      1689
 
 Time taken: 1.72 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 27
 Epoch 01 | loss inf | val acc 48.49%
 Epoch 02 | loss inf | val acc 52.28%
@@ -967,6 +1001,7 @@ Accuracy: 0.6791000592066312
 weighted avg       0.69      0.68      0.67      1689
 
 Time taken: 1.61 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 32
 Epoch 01 | loss inf | val acc 51.21%
 Epoch 02 | loss inf | val acc 50.98%
@@ -990,6 +1025,7 @@ Accuracy: 0.5879218472468917
 weighted avg       0.63      0.59      0.54      1689
 
 Time taken: 1.60 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 38 pos = 37
 Epoch 01 | loss inf | val acc 51.27%
 Epoch 02 | loss inf | val acc 58.56%
@@ -1015,6 +1051,7 @@ Accuracy: 0.640615748963884
 weighted avg       0.69      0.64      0.61      1689
 
 Time taken: 1.63 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 2
 Epoch 01 | loss inf | val acc 55.30%
 Epoch 02 | loss inf | val acc 59.92%
@@ -1039,6 +1076,7 @@ Accuracy: 0.6483126110124334
 weighted avg       0.71      0.65      0.61      1689
 
 Time taken: 1.59 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 7
 Epoch 01 | loss inf | val acc 50.09%
 Epoch 02 | loss inf | val acc 54.94%
@@ -1067,6 +1105,7 @@ Accuracy: 0.6216696269982238
 weighted avg       0.72      0.62      0.56      1689
 
 Time taken: 1.63 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 12
 Epoch 01 | loss inf | val acc 51.04%
 Epoch 02 | loss inf | val acc 51.63%
@@ -1099,6 +1138,7 @@ Accuracy: 0.6992303137951451
 weighted avg       0.71      0.70      0.70      1689
 
 Time taken: 1.65 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 17
 Epoch 01 | loss inf | val acc 50.50%
 Epoch 02 | loss inf | val acc 51.27%
@@ -1125,6 +1165,7 @@ Accuracy: 0.6021314387211367
 weighted avg       0.71      0.60      0.53      1689
 
 Time taken: 1.60 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 22
 Epoch 01 | loss inf | val acc 51.33%
 Epoch 02 | loss inf | val acc 53.70%
@@ -1153,6 +1194,7 @@ Accuracy: 0.6050917702782712
 weighted avg       0.68      0.61      0.57      1689
 
 Time taken: 1.61 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 27
 Epoch 01 | loss inf | val acc 54.83%
 Epoch 02 | loss inf | val acc 51.51%
@@ -1182,6 +1224,7 @@ Accuracy: 0.6625222024866785
 weighted avg       0.71      0.66      0.64      1689
 
 Time taken: 1.61 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 32
 Epoch 01 | loss inf | val acc 50.80%
 Epoch 02 | loss inf | val acc 55.77%
@@ -1204,6 +1247,7 @@ Accuracy: 0.5577264653641207
 weighted avg       0.63      0.56      0.47      1689
 
 Time taken: 1.63 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 37
 Epoch 01 | loss inf | val acc 51.39%
 Epoch 02 | loss inf | val acc 51.15%
@@ -1232,6 +1276,7 @@ Accuracy: 0.69449378330373
 weighted avg       0.69      0.69      0.69      1689
 
 Time taken: 1.63 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 43 pos = 42
 Epoch 01 | loss inf | val acc 51.51%
 Epoch 02 | loss inf | val acc 52.04%
@@ -1255,6 +1300,7 @@ Accuracy: 0.6678507992895204
 weighted avg       0.67      0.67      0.67      1689
 
 Time taken: 1.58 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 2
 Epoch 01 | loss inf | val acc 58.44%
 Epoch 02 | loss inf | val acc 56.19%
@@ -1276,6 +1322,7 @@ Accuracy: 0.5843694493783304
 weighted avg       0.59      0.58      0.56      1689
 
 Time taken: 1.60 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 7
 Epoch 01 | loss inf | val acc 51.21%
 Epoch 02 | loss inf | val acc 48.31%
@@ -1303,6 +1350,7 @@ Accuracy: 0.6453522794552989
 weighted avg       0.67      0.65      0.62      1689
 
 Time taken: 1.63 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 12
 Epoch 01 | loss inf | val acc 51.57%
 Epoch 02 | loss inf | val acc 52.28%
@@ -1338,6 +1386,7 @@ Accuracy: 0.6867969212551805
 weighted avg       0.72      0.69      0.67      1689
 
 Time taken: 1.62 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 17
 Epoch 01 | loss inf | val acc 51.45%
 Epoch 02 | loss inf | val acc 57.79%
@@ -1360,6 +1409,7 @@ Accuracy: 0.5778567199526347
 weighted avg       0.63      0.58      0.54      1689
 
 Time taken: 1.57 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 22
 Epoch 01 | loss inf | val acc 50.62%
 Epoch 02 | loss inf | val acc 54.71%
@@ -1388,6 +1438,7 @@ Accuracy: 0.6370633510953226
 weighted avg       0.69      0.64      0.60      1689
 
 Time taken: 1.60 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 27
 Epoch 01 | loss inf | val acc 51.27%
 Epoch 02 | loss inf | val acc 48.19%
@@ -1414,6 +1465,7 @@ Accuracy: 0.5849615156897573
 weighted avg       0.63      0.58      0.56      1689
 
 Time taken: 1.59 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 32
 Epoch 01 | loss inf | val acc 51.04%
 Epoch 02 | loss inf | val acc 50.21%
@@ -1446,6 +1498,7 @@ Accuracy: 0.6388395500296034
 weighted avg       0.69      0.64      0.61      1689
 
 Time taken: 1.62 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 37
 Epoch 01 | loss inf | val acc 48.31%
 Epoch 02 | loss inf | val acc 53.29%
@@ -1473,6 +1526,7 @@ Accuracy: 0.6465364120781527
 weighted avg       0.67      0.65      0.64      1689
 
 Time taken: 1.69 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 42
 Epoch 01 | loss inf | val acc 55.18%
 Epoch 02 | loss inf | val acc 51.33%
@@ -1494,6 +1548,7 @@ Accuracy: 0.551805802249852
 weighted avg       0.64      0.55      0.49      1689
 
 Time taken: 1.59 minutes
+
 Filtered with filter Block Pos Kernel with parameters: block_size = 48 pos = 47
 Epoch 01 | loss inf | val acc 54.35%
 Epoch 02 | loss inf | val acc 53.94%

@@ -1,4 +1,5 @@
 Current time: 12:25:50
+
 Filtered with filter Fibonacci Index Kernel
 Epoch 01 | loss 17.3569 | val acc 69.51%
 Epoch 02 | loss 11.9568 | val acc 70.46%

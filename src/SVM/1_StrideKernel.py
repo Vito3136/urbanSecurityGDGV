@@ -65,7 +65,7 @@ non_valid_malwares_path = (base_dir / "resources" / "non_valid_malwares").resolv
 goodware_bytecodes = collect_bytecodes(str(goodwares_path), str(non_valid_goodwares_path))
 malware_bytecodes = collect_bytecodes(str(malwares_path), str(non_valid_malwares_path))
 
-for i in range(0, 51, 5):
+for i in range(0, 41, 5):
     if (i == 0):
         i = 1
     for j in range(0, 51, 5):

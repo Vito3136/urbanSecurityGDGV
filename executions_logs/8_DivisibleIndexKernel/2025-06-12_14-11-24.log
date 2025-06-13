@@ -1,0 +1,1327 @@
+Current time: 14:11:24
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 2
+Epoch 01 | loss inf | val acc 51.21%
+Epoch 02 | loss inf | val acc 56.96%
+Epoch 03 | loss inf | val acc 50.74%
+Epoch 04 | loss inf | val acc 59.86%
+Epoch 05 | loss inf | val acc 51.57%
+Epoch 06 | loss inf | val acc 53.05%
+Epoch 07 | loss inf | val acc 61.69%
+Epoch 08 | loss inf | val acc 60.63%
+Epoch 09 | loss inf | val acc 67.02%
+Epoch 10 | loss inf | val acc 52.99%
+Epoch 11 | loss inf | val acc 58.14%
+Epoch 12 | loss inf | val acc 53.05%
+Epoch 13 | loss inf | val acc 68.32%
+Epoch 14 | loss inf | val acc 55.95%
+Epoch 15 | loss inf | val acc 70.28%
+Epoch 16 | loss inf | val acc 55.60%
+Epoch 17 | loss inf | val acc 54.11%
+Epoch 18 | loss inf | val acc 59.33%
+Epoch 19 | loss inf | val acc 54.77%
+Epoch 20 | loss inf | val acc 68.03%
+
+Early stop at epoch 20. Best val acc: 70.28%
+
+Accuracy: 0.7027827116637063
+              precision    recall  f1-score   support
+
+    Goodware       0.77      0.54      0.64       814
+     Malware       0.67      0.85      0.75       875
+
+    accuracy                           0.70      1689
+   macro avg       0.72      0.70      0.69      1689
+weighted avg       0.72      0.70      0.69      1689
+
+Time taken: 26.56 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 3
+Epoch 01 | loss inf | val acc 49.97%
+Epoch 02 | loss inf | val acc 51.15%
+Epoch 03 | loss inf | val acc 53.88%
+Epoch 04 | loss inf | val acc 54.11%
+Epoch 05 | loss inf | val acc 54.00%
+Epoch 06 | loss inf | val acc 63.00%
+Epoch 07 | loss inf | val acc 61.93%
+Epoch 08 | loss inf | val acc 52.22%
+Epoch 09 | loss inf | val acc 54.23%
+Epoch 10 | loss inf | val acc 64.59%
+Epoch 11 | loss inf | val acc 54.00%
+Epoch 12 | loss inf | val acc 53.88%
+Epoch 13 | loss inf | val acc 54.77%
+Epoch 14 | loss inf | val acc 52.34%
+Epoch 15 | loss inf | val acc 56.13%
+
+Early stop at epoch 15. Best val acc: 64.59%
+
+Accuracy: 0.6459443457667259
+              precision    recall  f1-score   support
+
+    Goodware       0.87      0.31      0.46       814
+     Malware       0.60      0.96      0.74       875
+
+    accuracy                           0.65      1689
+   macro avg       0.73      0.63      0.60      1689
+weighted avg       0.73      0.65      0.60      1689
+
+Time taken: 14.53 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 4
+Epoch 01 | loss inf | val acc 55.00%
+Epoch 02 | loss inf | val acc 51.39%
+Epoch 03 | loss inf | val acc 57.25%
+Epoch 04 | loss inf | val acc 62.52%
+Epoch 05 | loss inf | val acc 54.23%
+Epoch 06 | loss inf | val acc 51.51%
+Epoch 07 | loss inf | val acc 52.63%
+Epoch 08 | loss inf | val acc 53.11%
+Epoch 09 | loss inf | val acc 54.71%
+
+Early stop at epoch 9. Best val acc: 62.52%
+
+Accuracy: 0.6252220248667851
+              precision    recall  f1-score   support
+
+    Goodware       0.71      0.38      0.49       814
+     Malware       0.60      0.85      0.70       875
+
+    accuracy                           0.63      1689
+   macro avg       0.65      0.62      0.60      1689
+weighted avg       0.65      0.63      0.60      1689
+
+Time taken: 6.60 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 5
+Epoch 01 | loss inf | val acc 60.69%
+Epoch 02 | loss inf | val acc 51.04%
+Epoch 03 | loss inf | val acc 52.04%
+Epoch 04 | loss inf | val acc 53.70%
+Epoch 05 | loss inf | val acc 54.47%
+Epoch 06 | loss inf | val acc 61.16%
+Epoch 07 | loss inf | val acc 56.72%
+Epoch 08 | loss inf | val acc 58.02%
+Epoch 09 | loss inf | val acc 55.48%
+Epoch 10 | loss inf | val acc 56.19%
+Epoch 11 | loss inf | val acc 72.00%
+Epoch 12 | loss inf | val acc 56.19%
+Epoch 13 | loss inf | val acc 68.62%
+Epoch 14 | loss inf | val acc 56.60%
+Epoch 15 | loss inf | val acc 51.81%
+Epoch 16 | loss inf | val acc 56.60%
+
+Early stop at epoch 16. Best val acc: 72.00%
+
+Accuracy: 0.7199526346950859
+              precision    recall  f1-score   support
+
+    Goodware       0.75      0.63      0.69       814
+     Malware       0.70      0.80      0.75       875
+
+    accuracy                           0.72      1689
+   macro avg       0.72      0.72      0.72      1689
+weighted avg       0.72      0.72      0.72      1689
+
+Time taken: 8.14 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 6
+Epoch 01 | loss inf | val acc 56.96%
+Epoch 02 | loss inf | val acc 52.46%
+Epoch 03 | loss inf | val acc 55.54%
+Epoch 04 | loss inf | val acc 58.38%
+Epoch 05 | loss inf | val acc 51.39%
+Epoch 06 | loss inf | val acc 60.33%
+Epoch 07 | loss inf | val acc 60.45%
+Epoch 08 | loss inf | val acc 64.59%
+Epoch 09 | loss inf | val acc 52.99%
+Epoch 10 | loss inf | val acc 57.19%
+Epoch 11 | loss inf | val acc 52.99%
+Epoch 12 | loss inf | val acc 52.16%
+Epoch 13 | loss inf | val acc 63.06%
+
+Early stop at epoch 13. Best val acc: 64.59%
+
+Accuracy: 0.6459443457667259
+              precision    recall  f1-score   support
+
+    Goodware       0.75      0.40      0.52       814
+     Malware       0.61      0.88      0.72       875
+
+    accuracy                           0.65      1689
+   macro avg       0.68      0.64      0.62      1689
+weighted avg       0.68      0.65      0.62      1689
+
+Time taken: 6.72 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 7
+Epoch 01 | loss inf | val acc 51.27%
+Epoch 02 | loss inf | val acc 54.47%
+Epoch 03 | loss inf | val acc 58.67%
+Epoch 04 | loss inf | val acc 58.79%
+Epoch 05 | loss inf | val acc 53.46%
+Epoch 06 | loss inf | val acc 60.15%
+Epoch 07 | loss inf | val acc 59.09%
+Epoch 08 | loss inf | val acc 53.94%
+Epoch 09 | loss inf | val acc 63.94%
+Epoch 10 | loss inf | val acc 55.36%
+Epoch 11 | loss inf | val acc 55.95%
+Epoch 12 | loss inf | val acc 54.77%
+Epoch 13 | loss inf | val acc 52.87%
+Epoch 14 | loss inf | val acc 55.24%
+
+Early stop at epoch 14. Best val acc: 63.94%
+
+Accuracy: 0.6394316163410302
+              precision    recall  f1-score   support
+
+    Goodware       0.85      0.30      0.45       814
+     Malware       0.60      0.95      0.73       875
+
+    accuracy                           0.64      1689
+   macro avg       0.72      0.63      0.59      1689
+weighted avg       0.72      0.64      0.60      1689
+
+Time taken: 6.07 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 8
+Epoch 01 | loss inf | val acc 51.15%
+Epoch 02 | loss inf | val acc 50.80%
+Epoch 03 | loss inf | val acc 52.10%
+Epoch 04 | loss inf | val acc 55.36%
+Epoch 05 | loss inf | val acc 53.05%
+Epoch 06 | loss inf | val acc 51.45%
+Epoch 07 | loss inf | val acc 52.16%
+Epoch 08 | loss inf | val acc 58.50%
+Epoch 09 | loss inf | val acc 53.17%
+Epoch 10 | loss inf | val acc 61.28%
+Epoch 11 | loss inf | val acc 52.87%
+Epoch 12 | loss inf | val acc 55.60%
+Epoch 13 | loss inf | val acc 56.72%
+Epoch 14 | loss inf | val acc 53.46%
+Epoch 15 | loss inf | val acc 58.44%
+
+Early stop at epoch 15. Best val acc: 61.28%
+
+Accuracy: 0.6127886323268206
+              precision    recall  f1-score   support
+
+    Goodware       0.81      0.26      0.39       814
+     Malware       0.58      0.94      0.72       875
+
+    accuracy                           0.61      1689
+   macro avg       0.69      0.60      0.55      1689
+weighted avg       0.69      0.61      0.56      1689
+
+Time taken: 5.59 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 9
+Epoch 01 | loss inf | val acc 54.00%
+Epoch 02 | loss inf | val acc 52.04%
+Epoch 03 | loss inf | val acc 52.75%
+Epoch 04 | loss inf | val acc 53.23%
+Epoch 05 | loss inf | val acc 61.52%
+Epoch 06 | loss inf | val acc 54.47%
+Epoch 07 | loss inf | val acc 64.18%
+Epoch 08 | loss inf | val acc 57.73%
+Epoch 09 | loss inf | val acc 53.70%
+Epoch 10 | loss inf | val acc 54.41%
+Epoch 11 | loss inf | val acc 55.54%
+Epoch 12 | loss inf | val acc 55.42%
+
+Early stop at epoch 12. Best val acc: 64.18%
+
+Accuracy: 0.6417998815867377
+              precision    recall  f1-score   support
+
+    Goodware       0.59      0.88      0.70       814
+     Malware       0.79      0.42      0.55       875
+
+    accuracy                           0.64      1689
+   macro avg       0.69      0.65      0.63      1689
+weighted avg       0.69      0.64      0.62      1689
+
+Time taken: 4.64 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 10
+Epoch 01 | loss inf | val acc 49.56%
+Epoch 02 | loss inf | val acc 49.62%
+Epoch 03 | loss inf | val acc 50.21%
+Epoch 04 | loss inf | val acc 51.10%
+Epoch 05 | loss inf | val acc 57.61%
+Epoch 06 | loss inf | val acc 50.09%
+Epoch 07 | loss inf | val acc 55.30%
+Epoch 08 | loss inf | val acc 52.16%
+Epoch 09 | loss inf | val acc 53.46%
+Epoch 10 | loss inf | val acc 55.00%
+
+Early stop at epoch 10. Best val acc: 57.61%
+
+Accuracy: 0.576080521018354
+              precision    recall  f1-score   support
+
+    Goodware       0.70      0.21      0.32       814
+     Malware       0.56      0.92      0.69       875
+
+    accuracy                           0.58      1689
+   macro avg       0.63      0.56      0.51      1689
+weighted avg       0.62      0.58      0.51      1689
+
+Time taken: 4.09 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 11
+Epoch 01 | loss inf | val acc 50.09%
+Epoch 02 | loss inf | val acc 65.01%
+Epoch 03 | loss inf | val acc 58.85%
+Epoch 04 | loss inf | val acc 62.64%
+Epoch 05 | loss inf | val acc 53.46%
+Epoch 06 | loss inf | val acc 53.05%
+Epoch 07 | loss inf | val acc 56.96%
+
+Early stop at epoch 7. Best val acc: 65.01%
+
+Accuracy: 0.650088809946714
+              precision    recall  f1-score   support
+
+    Goodware       0.62      0.69      0.66       814
+     Malware       0.68      0.61      0.64       875
+
+    accuracy                           0.65      1689
+   macro avg       0.65      0.65      0.65      1689
+weighted avg       0.65      0.65      0.65      1689
+
+Time taken: 3.33 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 12
+Epoch 01 | loss inf | val acc 58.73%
+Epoch 02 | loss inf | val acc 49.20%
+Epoch 03 | loss inf | val acc 51.39%
+Epoch 04 | loss inf | val acc 52.16%
+Epoch 05 | loss inf | val acc 49.97%
+Epoch 06 | loss inf | val acc 51.69%
+
+Early stop at epoch 6. Best val acc: 58.73%
+
+Accuracy: 0.5891059798697454
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.88      0.67       814
+     Malware       0.74      0.32      0.45       875
+
+    accuracy                           0.59      1689
+   macro avg       0.64      0.60      0.56      1689
+weighted avg       0.64      0.59      0.56      1689
+
+Time taken: 3.40 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 13
+Epoch 01 | loss inf | val acc 51.98%
+Epoch 02 | loss inf | val acc 51.51%
+Epoch 03 | loss inf | val acc 50.38%
+Epoch 04 | loss inf | val acc 65.66%
+Epoch 05 | loss inf | val acc 54.23%
+Epoch 06 | loss inf | val acc 58.91%
+Epoch 07 | loss inf | val acc 56.78%
+Epoch 08 | loss inf | val acc 52.69%
+Epoch 09 | loss inf | val acc 51.45%
+
+Early stop at epoch 9. Best val acc: 65.66%
+
+Accuracy: 0.6660746003552398
+              precision    recall  f1-score   support
+
+    Goodware       0.74      0.47      0.58       814
+     Malware       0.63      0.84      0.72       875
+
+    accuracy                           0.67      1689
+   macro avg       0.69      0.66      0.65      1689
+weighted avg       0.68      0.67      0.65      1689
+
+Time taken: 3.83 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 14
+Epoch 01 | loss inf | val acc 49.91%
+Epoch 02 | loss inf | val acc 49.85%
+Epoch 03 | loss inf | val acc 52.22%
+Epoch 04 | loss inf | val acc 52.75%
+Epoch 05 | loss inf | val acc 51.33%
+Epoch 06 | loss inf | val acc 52.93%
+Epoch 07 | loss inf | val acc 51.87%
+Epoch 08 | loss inf | val acc 67.44%
+Epoch 09 | loss inf | val acc 51.57%
+Epoch 10 | loss inf | val acc 50.15%
+Epoch 11 | loss inf | val acc 52.16%
+Epoch 12 | loss inf | val acc 53.64%
+Epoch 13 | loss inf | val acc 52.58%
+
+Early stop at epoch 13. Best val acc: 67.44%
+
+Accuracy: 0.6808762581409118
+              precision    recall  f1-score   support
+
+    Goodware       0.64      0.76      0.70       814
+     Malware       0.73      0.60      0.66       875
+
+    accuracy                           0.68      1689
+   macro avg       0.69      0.68      0.68      1689
+weighted avg       0.69      0.68      0.68      1689
+
+Time taken: 4.55 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 15
+Epoch 01 | loss inf | val acc 51.81%
+Epoch 02 | loss inf | val acc 52.04%
+Epoch 03 | loss inf | val acc 59.80%
+Epoch 04 | loss inf | val acc 51.21%
+Epoch 05 | loss inf | val acc 53.17%
+Epoch 06 | loss inf | val acc 52.87%
+Epoch 07 | loss inf | val acc 51.63%
+Epoch 08 | loss inf | val acc 52.99%
+
+Early stop at epoch 8. Best val acc: 59.80%
+
+Accuracy: 0.6133806986382475
+              precision    recall  f1-score   support
+
+    Goodware       0.71      0.34      0.46       814
+     Malware       0.59      0.87      0.70       875
+
+    accuracy                           0.61      1689
+   macro avg       0.65      0.60      0.58      1689
+weighted avg       0.64      0.61      0.58      1689
+
+Time taken: 3.39 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 16
+Epoch 01 | loss inf | val acc 51.33%
+Epoch 02 | loss inf | val acc 55.24%
+Epoch 03 | loss inf | val acc 52.16%
+Epoch 04 | loss inf | val acc 51.51%
+Epoch 05 | loss inf | val acc 51.87%
+Epoch 06 | loss inf | val acc 51.39%
+Epoch 07 | loss inf | val acc 56.60%
+Epoch 08 | loss inf | val acc 51.87%
+Epoch 09 | loss inf | val acc 59.15%
+Epoch 10 | loss inf | val acc 51.63%
+Epoch 11 | loss inf | val acc 51.63%
+Epoch 12 | loss inf | val acc 51.81%
+Epoch 13 | loss inf | val acc 53.70%
+Epoch 14 | loss inf | val acc 53.35%
+
+Early stop at epoch 14. Best val acc: 59.15%
+
+Accuracy: 0.6086441681468324
+              precision    recall  f1-score   support
+
+    Goodware       0.56      0.90      0.69       814
+     Malware       0.78      0.34      0.47       875
+
+    accuracy                           0.61      1689
+   macro avg       0.67      0.62      0.58      1689
+weighted avg       0.67      0.61      0.58      1689
+
+Time taken: 4.45 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 17
+Epoch 01 | loss inf | val acc 51.27%
+Epoch 02 | loss inf | val acc 56.60%
+Epoch 03 | loss inf | val acc 58.56%
+Epoch 04 | loss inf | val acc 53.64%
+Epoch 05 | loss inf | val acc 55.95%
+Epoch 06 | loss inf | val acc 55.00%
+Epoch 07 | loss inf | val acc 54.41%
+Epoch 08 | loss inf | val acc 56.90%
+
+Early stop at epoch 8. Best val acc: 58.56%
+
+Accuracy: 0.5973949082297217
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.92      0.69       814
+     Malware       0.79      0.30      0.44       875
+
+    accuracy                           0.60      1689
+   macro avg       0.67      0.61      0.56      1689
+weighted avg       0.68      0.60      0.56      1689
+
+Time taken: 3.17 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 18
+Epoch 01 | loss inf | val acc 50.92%
+Epoch 02 | loss inf | val acc 58.73%
+Epoch 03 | loss inf | val acc 51.15%
+Epoch 04 | loss inf | val acc 51.39%
+Epoch 05 | loss inf | val acc 51.15%
+Epoch 06 | loss inf | val acc 52.34%
+Epoch 07 | loss inf | val acc 50.98%
+
+Early stop at epoch 7. Best val acc: 58.73%
+
+Accuracy: 0.5956187092954411
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.82      0.66       814
+     Malware       0.70      0.39      0.50       875
+
+    accuracy                           0.60      1689
+   macro avg       0.63      0.60      0.58      1689
+weighted avg       0.63      0.60      0.58      1689
+
+Time taken: 3.09 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 19
+Epoch 01 | loss inf | val acc 51.69%
+Epoch 02 | loss inf | val acc 62.05%
+Epoch 03 | loss inf | val acc 53.64%
+Epoch 04 | loss inf | val acc 52.04%
+Epoch 05 | loss inf | val acc 54.23%
+Epoch 06 | loss inf | val acc 52.81%
+Epoch 07 | loss inf | val acc 53.94%
+
+Early stop at epoch 7. Best val acc: 62.05%
+
+Accuracy: 0.6388395500296034
+              precision    recall  f1-score   support
+
+    Goodware       0.70      0.44      0.54       814
+     Malware       0.61      0.82      0.70       875
+
+    accuracy                           0.64      1689
+   macro avg       0.65      0.63      0.62      1689
+weighted avg       0.65      0.64      0.63      1689
+
+Time taken: 2.96 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 20
+Epoch 01 | loss inf | val acc 49.02%
+Epoch 02 | loss inf | val acc 50.21%
+Epoch 03 | loss inf | val acc 58.32%
+Epoch 04 | loss inf | val acc 51.27%
+Epoch 05 | loss inf | val acc 50.56%
+Epoch 06 | loss inf | val acc 49.97%
+Epoch 07 | loss inf | val acc 50.80%
+Epoch 08 | loss inf | val acc 51.10%
+
+Early stop at epoch 8. Best val acc: 58.32%
+
+Accuracy: 0.6021314387211367
+              precision    recall  f1-score   support
+
+    Goodware       0.60      0.52      0.56       814
+     Malware       0.60      0.68      0.64       875
+
+    accuracy                           0.60      1689
+   macro avg       0.60      0.60      0.60      1689
+weighted avg       0.60      0.60      0.60      1689
+
+Time taken: 2.93 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 21
+Epoch 01 | loss inf | val acc 49.97%
+Epoch 02 | loss inf | val acc 56.48%
+Epoch 03 | loss inf | val acc 54.06%
+Epoch 04 | loss inf | val acc 52.52%
+Epoch 05 | loss inf | val acc 60.21%
+Epoch 06 | loss inf | val acc 52.63%
+Epoch 07 | loss inf | val acc 51.69%
+Epoch 08 | loss inf | val acc 54.41%
+Epoch 09 | loss inf | val acc 53.58%
+Epoch 10 | loss inf | val acc 52.87%
+
+Early stop at epoch 10. Best val acc: 60.21%
+
+Accuracy: 0.6050917702782712
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.93      0.70       814
+     Malware       0.83      0.30      0.44       875
+
+    accuracy                           0.61      1689
+   macro avg       0.69      0.62      0.57      1689
+weighted avg       0.70      0.61      0.56      1689
+
+Time taken: 3.20 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 22
+Epoch 01 | loss inf | val acc 51.51%
+Epoch 02 | loss inf | val acc 48.61%
+Epoch 03 | loss inf | val acc 51.51%
+Epoch 04 | loss inf | val acc 51.15%
+Epoch 05 | loss inf | val acc 56.19%
+Epoch 06 | loss inf | val acc 64.83%
+Epoch 07 | loss inf | val acc 51.63%
+Epoch 08 | loss inf | val acc 51.39%
+Epoch 09 | loss inf | val acc 51.92%
+Epoch 10 | loss inf | val acc 53.17%
+Epoch 11 | loss inf | val acc 54.11%
+
+Early stop at epoch 11. Best val acc: 64.83%
+
+Accuracy: 0.6542332741267022
+              precision    recall  f1-score   support
+
+    Goodware       0.63      0.67      0.65       814
+     Malware       0.68      0.64      0.66       875
+
+    accuracy                           0.65      1689
+   macro avg       0.65      0.65      0.65      1689
+weighted avg       0.66      0.65      0.65      1689
+
+Time taken: 3.13 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 23
+Epoch 01 | loss inf | val acc 59.03%
+Epoch 02 | loss inf | val acc 57.31%
+Epoch 03 | loss inf | val acc 51.87%
+Epoch 04 | loss inf | val acc 57.43%
+Epoch 05 | loss inf | val acc 51.75%
+Epoch 06 | loss inf | val acc 52.75%
+
+Early stop at epoch 6. Best val acc: 59.03%
+
+Accuracy: 0.5944345766725874
+              precision    recall  f1-score   support
+
+    Goodware       0.56      0.75      0.64       814
+     Malware       0.66      0.45      0.53       875
+
+    accuracy                           0.59      1689
+   macro avg       0.61      0.60      0.59      1689
+weighted avg       0.61      0.59      0.59      1689
+
+Time taken: 2.56 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 24
+Epoch 01 | loss inf | val acc 52.22%
+Epoch 02 | loss inf | val acc 51.21%
+Epoch 03 | loss inf | val acc 51.21%
+Epoch 04 | loss inf | val acc 51.92%
+Epoch 05 | loss inf | val acc 51.39%
+Epoch 06 | loss inf | val acc 51.39%
+
+Early stop at epoch 6. Best val acc: 52.22%
+
+Accuracy: 0.5156897572528123
+              precision    recall  f1-score   support
+
+    Goodware       0.00      0.00      0.00       814
+     Malware       0.52      1.00      0.68       875
+
+    accuracy                           0.52      1689
+   macro avg       0.26      0.50      0.34      1689
+weighted avg       0.27      0.52      0.35      1689
+
+Time taken: 2.82 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 25
+Epoch 01 | loss inf | val acc 51.27%
+Epoch 02 | loss inf | val acc 49.73%
+Epoch 03 | loss inf | val acc 51.63%
+Epoch 04 | loss inf | val acc 51.27%
+Epoch 05 | loss inf | val acc 55.77%
+Epoch 06 | loss inf | val acc 52.81%
+Epoch 07 | loss inf | val acc 54.29%
+Epoch 08 | loss inf | val acc 60.21%
+Epoch 09 | loss inf | val acc 53.52%
+Epoch 10 | loss inf | val acc 56.19%
+Epoch 11 | loss inf | val acc 58.20%
+Epoch 12 | loss inf | val acc 51.51%
+Epoch 13 | loss inf | val acc 54.59%
+
+Early stop at epoch 13. Best val acc: 60.21%
+
+Accuracy: 0.6027235050325637
+              precision    recall  f1-score   support
+
+    Goodware       0.79      0.24      0.37       814
+     Malware       0.57      0.94      0.71       875
+
+    accuracy                           0.60      1689
+   macro avg       0.68      0.59      0.54      1689
+weighted avg       0.68      0.60      0.54      1689
+
+Time taken: 3.49 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 26
+Epoch 01 | loss inf | val acc 59.44%
+Epoch 02 | loss inf | val acc 50.92%
+Epoch 03 | loss inf | val acc 51.27%
+Epoch 04 | loss inf | val acc 51.92%
+Epoch 05 | loss inf | val acc 58.26%
+Epoch 06 | loss inf | val acc 52.34%
+
+Early stop at epoch 6. Best val acc: 59.44%
+
+Accuracy: 0.5944345766725874
+              precision    recall  f1-score   support
+
+    Goodware       0.63      0.39      0.48       814
+     Malware       0.58      0.79      0.67       875
+
+    accuracy                           0.59      1689
+   macro avg       0.60      0.59      0.57      1689
+weighted avg       0.60      0.59      0.58      1689
+
+Time taken: 2.52 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 27
+Epoch 01 | loss inf | val acc 53.94%
+Epoch 02 | loss inf | val acc 51.39%
+Epoch 03 | loss inf | val acc 52.04%
+Epoch 04 | loss inf | val acc 51.92%
+Epoch 05 | loss inf | val acc 51.27%
+Epoch 06 | loss inf | val acc 53.35%
+
+Early stop at epoch 6. Best val acc: 53.94%
+
+Accuracy: 0.5399644760213144
+              precision    recall  f1-score   support
+
+    Goodware       0.75      0.07      0.12       814
+     Malware       0.53      0.98      0.69       875
+
+    accuracy                           0.54      1689
+   macro avg       0.64      0.52      0.41      1689
+weighted avg       0.64      0.54      0.42      1689
+
+Time taken: 2.68 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 28
+Epoch 01 | loss inf | val acc 50.98%
+Epoch 02 | loss inf | val acc 51.92%
+Epoch 03 | loss inf | val acc 52.04%
+Epoch 04 | loss inf | val acc 56.01%
+Epoch 05 | loss inf | val acc 52.69%
+Epoch 06 | loss inf | val acc 51.39%
+Epoch 07 | loss inf | val acc 64.59%
+Epoch 08 | loss inf | val acc 51.39%
+Epoch 09 | loss inf | val acc 52.46%
+Epoch 10 | loss inf | val acc 51.69%
+Epoch 11 | loss inf | val acc 53.70%
+Epoch 12 | loss inf | val acc 51.81%
+
+Early stop at epoch 12. Best val acc: 64.59%
+
+Accuracy: 0.6560094730609828
+              precision    recall  f1-score   support
+
+    Goodware       0.63      0.71      0.67       814
+     Malware       0.69      0.60      0.64       875
+
+    accuracy                           0.66      1689
+   macro avg       0.66      0.66      0.66      1689
+weighted avg       0.66      0.66      0.66      1689
+
+Time taken: 3.01 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 29
+Epoch 01 | loss inf | val acc 48.43%
+Epoch 02 | loss inf | val acc 51.33%
+Epoch 03 | loss inf | val acc 51.75%
+Epoch 04 | loss inf | val acc 53.94%
+Epoch 05 | loss inf | val acc 68.32%
+Epoch 06 | loss inf | val acc 68.56%
+Epoch 07 | loss inf | val acc 57.61%
+Epoch 08 | loss inf | val acc 56.07%
+Epoch 09 | loss inf | val acc 64.00%
+Epoch 10 | loss inf | val acc 54.23%
+Epoch 11 | loss inf | val acc 57.79%
+
+Early stop at epoch 11. Best val acc: 68.56%
+
+Accuracy: 0.6980461811722913
+              precision    recall  f1-score   support
+
+    Goodware       0.77      0.54      0.63       814
+     Malware       0.66      0.85      0.74       875
+
+    accuracy                           0.70      1689
+   macro avg       0.71      0.69      0.69      1689
+weighted avg       0.71      0.70      0.69      1689
+
+Time taken: 2.91 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 30
+Epoch 01 | loss inf | val acc 49.50%
+Epoch 02 | loss inf | val acc 51.04%
+Epoch 03 | loss inf | val acc 52.93%
+Epoch 04 | loss inf | val acc 51.21%
+Epoch 05 | loss inf | val acc 61.28%
+Epoch 06 | loss inf | val acc 51.27%
+Epoch 07 | loss inf | val acc 51.57%
+Epoch 08 | loss inf | val acc 51.39%
+Epoch 09 | loss inf | val acc 51.87%
+Epoch 10 | loss inf | val acc 51.45%
+
+Early stop at epoch 10. Best val acc: 61.28%
+
+Accuracy: 0.6169330965068087
+              precision    recall  f1-score   support
+
+    Goodware       0.67      0.40      0.50       814
+     Malware       0.59      0.82      0.69       875
+
+    accuracy                           0.62      1689
+   macro avg       0.63      0.61      0.59      1689
+weighted avg       0.63      0.62      0.60      1689
+
+Time taken: 2.82 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 31
+Epoch 01 | loss inf | val acc 48.31%
+Epoch 02 | loss inf | val acc 63.00%
+Epoch 03 | loss inf | val acc 58.97%
+Epoch 04 | loss inf | val acc 51.87%
+Epoch 05 | loss inf | val acc 54.17%
+Epoch 06 | loss inf | val acc 64.06%
+Epoch 07 | loss inf | val acc 51.63%
+Epoch 08 | loss inf | val acc 52.99%
+Epoch 09 | loss inf | val acc 52.99%
+Epoch 10 | loss inf | val acc 54.00%
+Epoch 11 | loss inf | val acc 56.25%
+
+Early stop at epoch 11. Best val acc: 64.06%
+
+Accuracy: 0.6429840142095915
+              precision    recall  f1-score   support
+
+    Goodware       0.59      0.88      0.70       814
+     Malware       0.79      0.43      0.55       875
+
+    accuracy                           0.64      1689
+   macro avg       0.69      0.65      0.63      1689
+weighted avg       0.69      0.64      0.63      1689
+
+Time taken: 2.98 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 32
+Epoch 01 | loss inf | val acc 51.75%
+Epoch 02 | loss inf | val acc 50.98%
+Epoch 03 | loss inf | val acc 58.38%
+Epoch 04 | loss inf | val acc 51.63%
+Epoch 05 | loss inf | val acc 60.63%
+Epoch 06 | loss inf | val acc 52.16%
+Epoch 07 | loss inf | val acc 52.04%
+Epoch 08 | loss inf | val acc 63.71%
+Epoch 09 | loss inf | val acc 52.28%
+Epoch 10 | loss inf | val acc 53.82%
+Epoch 11 | loss inf | val acc 52.10%
+Epoch 12 | loss inf | val acc 53.88%
+Epoch 13 | loss inf | val acc 61.75%
+
+Early stop at epoch 13. Best val acc: 63.71%
+
+Accuracy: 0.670219064535228
+              precision    recall  f1-score   support
+
+    Goodware       0.62      0.83      0.71       814
+     Malware       0.77      0.52      0.62       875
+
+    accuracy                           0.67      1689
+   macro avg       0.69      0.68      0.66      1689
+weighted avg       0.70      0.67      0.66      1689
+
+Time taken: 2.86 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 33
+Epoch 01 | loss inf | val acc 51.92%
+Epoch 02 | loss inf | val acc 51.15%
+Epoch 03 | loss inf | val acc 63.77%
+Epoch 04 | loss inf | val acc 51.33%
+Epoch 05 | loss inf | val acc 60.92%
+Epoch 06 | loss inf | val acc 52.04%
+Epoch 07 | loss inf | val acc 51.45%
+Epoch 08 | loss inf | val acc 61.34%
+
+Early stop at epoch 8. Best val acc: 63.77%
+
+Accuracy: 0.6376554174067496
+              precision    recall  f1-score   support
+
+    Goodware       0.59      0.83      0.69       814
+     Malware       0.74      0.46      0.57       875
+
+    accuracy                           0.64      1689
+   macro avg       0.67      0.64      0.63      1689
+weighted avg       0.67      0.64      0.63      1689
+
+Time taken: 2.52 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 34
+Epoch 01 | loss inf | val acc 49.62%
+Epoch 02 | loss inf | val acc 51.21%
+Epoch 03 | loss inf | val acc 51.92%
+Epoch 04 | loss inf | val acc 53.70%
+Epoch 05 | loss inf | val acc 51.81%
+Epoch 06 | loss inf | val acc 55.12%
+Epoch 07 | loss inf | val acc 60.04%
+Epoch 08 | loss inf | val acc 66.07%
+Epoch 09 | loss inf | val acc 54.77%
+Epoch 10 | loss inf | val acc 62.40%
+Epoch 11 | loss inf | val acc 61.10%
+Epoch 12 | loss inf | val acc 53.70%
+Epoch 13 | loss inf | val acc 57.61%
+
+Early stop at epoch 13. Best val acc: 66.07%
+
+Accuracy: 0.6678507992895204
+              precision    recall  f1-score   support
+
+    Goodware       0.70      0.55      0.62       814
+     Malware       0.65      0.77      0.71       875
+
+    accuracy                           0.67      1689
+   macro avg       0.67      0.66      0.66      1689
+weighted avg       0.67      0.67      0.66      1689
+
+Time taken: 2.79 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 35
+Epoch 01 | loss inf | val acc 51.45%
+Epoch 02 | loss inf | val acc 50.56%
+Epoch 03 | loss inf | val acc 51.75%
+Epoch 04 | loss inf | val acc 54.17%
+Epoch 05 | loss inf | val acc 55.00%
+Epoch 06 | loss inf | val acc 61.34%
+Epoch 07 | loss inf | val acc 51.63%
+Epoch 08 | loss inf | val acc 53.88%
+Epoch 09 | loss inf | val acc 52.46%
+Epoch 10 | loss inf | val acc 61.40%
+Epoch 11 | loss inf | val acc 60.15%
+Epoch 12 | loss inf | val acc 61.87%
+Epoch 13 | loss inf | val acc 52.16%
+Epoch 14 | loss inf | val acc 54.47%
+Epoch 15 | loss inf | val acc 56.90%
+Epoch 16 | loss inf | val acc 61.10%
+Epoch 17 | loss inf | val acc 63.77%
+Epoch 18 | loss inf | val acc 59.33%
+Epoch 19 | loss inf | val acc 55.42%
+Epoch 20 | loss inf | val acc 52.58%
+Epoch 21 | loss inf | val acc 72.00%
+Epoch 22 | loss inf | val acc 54.41%
+Epoch 23 | loss inf | val acc 51.81%
+Epoch 24 | loss inf | val acc 55.48%
+Epoch 25 | loss inf | val acc 53.82%
+Epoch 26 | loss inf | val acc 55.83%
+
+Early stop at epoch 26. Best val acc: 72.00%
+
+Accuracy: 0.7193605683836589
+              precision    recall  f1-score   support
+
+    Goodware       0.83      0.52      0.64       814
+     Malware       0.67      0.90      0.77       875
+
+    accuracy                           0.72      1689
+   macro avg       0.75      0.71      0.71      1689
+weighted avg       0.75      0.72      0.71      1689
+
+Time taken: 3.55 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 36
+Epoch 01 | loss inf | val acc 49.38%
+Epoch 02 | loss inf | val acc 50.98%
+Epoch 03 | loss inf | val acc 56.60%
+Epoch 04 | loss inf | val acc 52.99%
+Epoch 05 | loss inf | val acc 51.92%
+Epoch 06 | loss inf | val acc 63.47%
+Epoch 07 | loss inf | val acc 54.41%
+Epoch 08 | loss inf | val acc 65.07%
+Epoch 09 | loss inf | val acc 55.36%
+Epoch 10 | loss inf | val acc 53.40%
+Epoch 11 | loss inf | val acc 53.46%
+Epoch 12 | loss inf | val acc 52.52%
+Epoch 13 | loss inf | val acc 53.58%
+
+Early stop at epoch 13. Best val acc: 65.07%
+
+Accuracy: 0.6518650088809946
+              precision    recall  f1-score   support
+
+    Goodware       0.76      0.41      0.53       814
+     Malware       0.61      0.88      0.72       875
+
+    accuracy                           0.65      1689
+   macro avg       0.69      0.64      0.63      1689
+weighted avg       0.68      0.65      0.63      1689
+
+Time taken: 2.75 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 37
+Epoch 01 | loss inf | val acc 50.09%
+Epoch 02 | loss inf | val acc 52.63%
+Epoch 03 | loss inf | val acc 53.58%
+Epoch 04 | loss inf | val acc 52.04%
+Epoch 05 | loss inf | val acc 55.18%
+Epoch 06 | loss inf | val acc 62.76%
+Epoch 07 | loss inf | val acc 60.81%
+Epoch 08 | loss inf | val acc 51.75%
+Epoch 09 | loss inf | val acc 61.04%
+Epoch 10 | loss inf | val acc 59.98%
+Epoch 11 | loss inf | val acc 57.90%
+
+Early stop at epoch 11. Best val acc: 62.76%
+
+Accuracy: 0.6323268206039077
+              precision    recall  f1-score   support
+
+    Goodware       0.81      0.31      0.45       814
+     Malware       0.59      0.93      0.72       875
+
+    accuracy                           0.63      1689
+   macro avg       0.70      0.62      0.59      1689
+weighted avg       0.70      0.63      0.59      1689
+
+Time taken: 2.85 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 38
+Epoch 01 | loss inf | val acc 49.50%
+Epoch 02 | loss inf | val acc 50.44%
+Epoch 03 | loss inf | val acc 54.83%
+Epoch 04 | loss inf | val acc 51.45%
+Epoch 05 | loss inf | val acc 56.42%
+Epoch 06 | loss inf | val acc 51.98%
+Epoch 07 | loss inf | val acc 59.56%
+Epoch 08 | loss inf | val acc 51.33%
+Epoch 09 | loss inf | val acc 52.52%
+Epoch 10 | loss inf | val acc 52.28%
+Epoch 11 | loss inf | val acc 53.70%
+Epoch 12 | loss inf | val acc 52.99%
+
+Early stop at epoch 12. Best val acc: 59.56%
+
+Accuracy: 0.6015393724097099
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.93      0.69       814
+     Malware       0.83      0.29      0.43       875
+
+    accuracy                           0.60      1689
+   macro avg       0.69      0.61      0.56      1689
+weighted avg       0.69      0.60      0.56      1689
+
+Time taken: 2.46 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 39
+Epoch 01 | loss inf | val acc 58.26%
+Epoch 02 | loss inf | val acc 51.57%
+Epoch 03 | loss inf | val acc 54.17%
+Epoch 04 | loss inf | val acc 50.86%
+Epoch 05 | loss inf | val acc 57.25%
+Epoch 06 | loss inf | val acc 66.31%
+Epoch 07 | loss inf | val acc 53.29%
+Epoch 08 | loss inf | val acc 53.11%
+Epoch 09 | loss inf | val acc 50.62%
+Epoch 10 | loss inf | val acc 53.40%
+Epoch 11 | loss inf | val acc 55.24%
+
+Early stop at epoch 11. Best val acc: 66.31%
+
+Accuracy: 0.6631142687981054
+              precision    recall  f1-score   support
+
+    Goodware       0.70      0.52      0.60       814
+     Malware       0.64      0.80      0.71       875
+
+    accuracy                           0.66      1689
+   macro avg       0.67      0.66      0.65      1689
+weighted avg       0.67      0.66      0.66      1689
+
+Time taken: 2.57 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 40
+Epoch 01 | loss inf | val acc 50.27%
+Epoch 02 | loss inf | val acc 52.04%
+Epoch 03 | loss inf | val acc 59.68%
+Epoch 04 | loss inf | val acc 51.51%
+Epoch 05 | loss inf | val acc 50.38%
+Epoch 06 | loss inf | val acc 58.08%
+Epoch 07 | loss inf | val acc 51.75%
+Epoch 08 | loss inf | val acc 52.63%
+
+Early stop at epoch 8. Best val acc: 59.68%
+
+Accuracy: 0.6116044997039668
+              precision    recall  f1-score   support
+
+    Goodware       0.63      0.46      0.54       814
+     Malware       0.60      0.75      0.67       875
+
+    accuracy                           0.61      1689
+   macro avg       0.62      0.61      0.60      1689
+weighted avg       0.62      0.61      0.60      1689
+
+Time taken: 2.43 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 41
+Epoch 01 | loss inf | val acc 51.39%
+Epoch 02 | loss inf | val acc 59.21%
+Epoch 03 | loss inf | val acc 55.12%
+Epoch 04 | loss inf | val acc 59.27%
+Epoch 05 | loss inf | val acc 57.96%
+Epoch 06 | loss inf | val acc 55.48%
+Epoch 07 | loss inf | val acc 55.36%
+Epoch 08 | loss inf | val acc 52.63%
+Epoch 09 | loss inf | val acc 59.92%
+Epoch 10 | loss inf | val acc 57.37%
+Epoch 11 | loss inf | val acc 53.11%
+Epoch 12 | loss inf | val acc 57.31%
+Epoch 13 | loss inf | val acc 55.89%
+Epoch 14 | loss inf | val acc 57.49%
+
+Early stop at epoch 14. Best val acc: 59.92%
+
+Accuracy: 0.5991711071640023
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.94      0.69       814
+     Malware       0.83      0.28      0.42       875
+
+    accuracy                           0.60      1689
+   macro avg       0.69      0.61      0.56      1689
+weighted avg       0.70      0.60      0.55      1689
+
+Time taken: 2.56 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 42
+Epoch 01 | loss inf | val acc 51.45%
+Epoch 02 | loss inf | val acc 52.22%
+Epoch 03 | loss inf | val acc 52.22%
+Epoch 04 | loss inf | val acc 51.81%
+Epoch 05 | loss inf | val acc 50.56%
+Epoch 06 | loss inf | val acc 50.92%
+Epoch 07 | loss inf | val acc 54.47%
+Epoch 08 | loss inf | val acc 52.87%
+Epoch 09 | loss inf | val acc 52.87%
+Epoch 10 | loss inf | val acc 52.87%
+Epoch 11 | loss inf | val acc 55.65%
+Epoch 12 | loss inf | val acc 60.86%
+Epoch 13 | loss inf | val acc 51.87%
+Epoch 14 | loss inf | val acc 63.59%
+Epoch 15 | loss inf | val acc 57.49%
+Epoch 16 | loss inf | val acc 56.01%
+Epoch 17 | loss inf | val acc 58.32%
+Epoch 18 | loss inf | val acc 54.35%
+Epoch 19 | loss inf | val acc 56.01%
+
+Early stop at epoch 19. Best val acc: 63.59%
+
+Accuracy: 0.6400236826524571
+              precision    recall  f1-score   support
+
+    Goodware       0.58      0.89      0.70       814
+     Malware       0.80      0.41      0.54       875
+
+    accuracy                           0.64      1689
+   macro avg       0.69      0.65      0.62      1689
+weighted avg       0.70      0.64      0.62      1689
+
+Time taken: 2.88 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 43
+Epoch 01 | loss inf | val acc 51.51%
+Epoch 02 | loss inf | val acc 51.27%
+Epoch 03 | loss inf | val acc 53.94%
+Epoch 04 | loss inf | val acc 51.57%
+Epoch 05 | loss inf | val acc 53.58%
+Epoch 06 | loss inf | val acc 51.81%
+Epoch 07 | loss inf | val acc 54.06%
+Epoch 08 | loss inf | val acc 52.99%
+Epoch 09 | loss inf | val acc 58.50%
+Epoch 10 | loss inf | val acc 57.67%
+Epoch 11 | loss inf | val acc 53.46%
+Epoch 12 | loss inf | val acc 51.39%
+Epoch 13 | loss inf | val acc 52.34%
+Epoch 14 | loss inf | val acc 53.88%
+
+Early stop at epoch 14. Best val acc: 58.50%
+
+Accuracy: 0.5849615156897573
+              precision    recall  f1-score   support
+
+    Goodware       0.54      0.95      0.69       814
+     Malware       0.85      0.24      0.38       875
+
+    accuracy                           0.58      1689
+   macro avg       0.69      0.60      0.53      1689
+weighted avg       0.70      0.58      0.53      1689
+
+Time taken: 2.59 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 44
+Epoch 01 | loss inf | val acc 58.08%
+Epoch 02 | loss inf | val acc 50.92%
+Epoch 03 | loss inf | val acc 51.69%
+Epoch 04 | loss inf | val acc 52.16%
+Epoch 05 | loss inf | val acc 52.58%
+Epoch 06 | loss inf | val acc 51.63%
+
+Early stop at epoch 6. Best val acc: 58.08%
+
+Accuracy: 0.5790408525754884
+              precision    recall  f1-score   support
+
+    Goodware       0.54      0.84      0.66       814
+     Malware       0.69      0.34      0.45       875
+
+    accuracy                           0.58      1689
+   macro avg       0.62      0.59      0.56      1689
+weighted avg       0.62      0.58      0.55      1689
+
+Time taken: 2.15 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 45
+Epoch 01 | loss inf | val acc 49.91%
+Epoch 02 | loss inf | val acc 51.92%
+Epoch 03 | loss inf | val acc 59.15%
+Epoch 04 | loss inf | val acc 50.80%
+Epoch 05 | loss inf | val acc 53.52%
+Epoch 06 | loss inf | val acc 55.12%
+Epoch 07 | loss inf | val acc 54.65%
+Epoch 08 | loss inf | val acc 51.33%
+
+Early stop at epoch 8. Best val acc: 59.15%
+
+Accuracy: 0.5944345766725874
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.91      0.68       814
+     Malware       0.78      0.30      0.43       875
+
+    accuracy                           0.59      1689
+   macro avg       0.67      0.61      0.56      1689
+weighted avg       0.67      0.59      0.55      1689
+
+Time taken: 2.26 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 46
+Epoch 01 | loss inf | val acc 52.40%
+Epoch 02 | loss inf | val acc 58.67%
+Epoch 03 | loss inf | val acc 52.40%
+Epoch 04 | loss inf | val acc 57.67%
+Epoch 05 | loss inf | val acc 53.52%
+Epoch 06 | loss inf | val acc 52.16%
+Epoch 07 | loss inf | val acc 54.35%
+
+Early stop at epoch 7. Best val acc: 58.67%
+
+Accuracy: 0.5920663114268798
+              precision    recall  f1-score   support
+
+    Goodware       0.55      0.84      0.66       814
+     Malware       0.70      0.37      0.48       875
+
+    accuracy                           0.59      1689
+   macro avg       0.63      0.60      0.57      1689
+weighted avg       0.63      0.59      0.57      1689
+
+Time taken: 2.42 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 47
+Epoch 01 | loss inf | val acc 53.05%
+Epoch 02 | loss inf | val acc 52.40%
+Epoch 03 | loss inf | val acc 53.52%
+Epoch 04 | loss inf | val acc 51.39%
+Epoch 05 | loss inf | val acc 53.11%
+Epoch 06 | loss inf | val acc 53.58%
+Epoch 07 | loss inf | val acc 66.79%
+Epoch 08 | loss inf | val acc 60.81%
+Epoch 09 | loss inf | val acc 55.30%
+Epoch 10 | loss inf | val acc 53.76%
+Epoch 11 | loss inf | val acc 53.88%
+Epoch 12 | loss inf | val acc 55.36%
+
+Early stop at epoch 12. Best val acc: 66.79%
+
+Accuracy: 0.6678507992895204
+              precision    recall  f1-score   support
+
+    Goodware       0.69      0.57      0.62       814
+     Malware       0.65      0.76      0.70       875
+
+    accuracy                           0.67      1689
+   macro avg       0.67      0.66      0.66      1689
+weighted avg       0.67      0.67      0.66      1689
+
+Time taken: 2.34 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 48
+Epoch 01 | loss inf | val acc 49.62%
+Epoch 02 | loss inf | val acc 51.33%
+Epoch 03 | loss inf | val acc 56.36%
+Epoch 04 | loss inf | val acc 51.51%
+Epoch 05 | loss inf | val acc 53.23%
+Epoch 06 | loss inf | val acc 51.21%
+Epoch 07 | loss inf | val acc 60.86%
+Epoch 08 | loss inf | val acc 53.23%
+Epoch 09 | loss inf | val acc 52.22%
+Epoch 10 | loss inf | val acc 52.69%
+Epoch 11 | loss inf | val acc 52.81%
+Epoch 12 | loss inf | val acc 57.61%
+
+Early stop at epoch 12. Best val acc: 60.86%
+
+Accuracy: 0.6086441681468324
+              precision    recall  f1-score   support
+
+    Goodware       0.56      0.91      0.69       814
+     Malware       0.79      0.33      0.47       875
+
+    accuracy                           0.61      1689
+   macro avg       0.68      0.62      0.58      1689
+weighted avg       0.68      0.61      0.57      1689
+
+Time taken: 2.74 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 49
+Epoch 01 | loss inf | val acc 58.38%
+Epoch 02 | loss inf | val acc 52.16%
+Epoch 03 | loss inf | val acc 54.47%
+Epoch 04 | loss inf | val acc 55.42%
+Epoch 05 | loss inf | val acc 56.19%
+Epoch 06 | loss inf | val acc 60.04%
+Epoch 07 | loss inf | val acc 56.13%
+Epoch 08 | loss inf | val acc 55.54%
+Epoch 09 | loss inf | val acc 53.64%
+Epoch 10 | loss inf | val acc 61.04%
+Epoch 11 | loss inf | val acc 67.85%
+Epoch 12 | loss inf | val acc 58.61%
+Epoch 13 | loss inf | val acc 55.83%
+Epoch 14 | loss inf | val acc 63.35%
+Epoch 15 | loss inf | val acc 56.01%
+Epoch 16 | loss inf | val acc 56.90%
+
+Early stop at epoch 16. Best val acc: 67.85%
+
+Accuracy: 0.6832445233866193
+              precision    recall  f1-score   support
+
+    Goodware       0.65      0.76      0.70       814
+     Malware       0.73      0.61      0.67       875
+
+    accuracy                           0.68      1689
+   macro avg       0.69      0.69      0.68      1689
+weighted avg       0.69      0.68      0.68      1689
+
+Time taken: 2.41 minutes
+
+Filtered with filter Divisible Index Kernel with parameter: mod = 50
+Epoch 01 | loss inf | val acc 55.65%
+Epoch 02 | loss inf | val acc 50.62%
+Epoch 03 | loss inf | val acc 50.03%
+Epoch 04 | loss inf | val acc 50.74%
+Epoch 05 | loss inf | val acc 53.11%
+Epoch 06 | loss inf | val acc 52.75%
+
+Early stop at epoch 6. Best val acc: 55.65%
+
+Accuracy: 0.5565423327412671
+              precision    recall  f1-score   support
+
+    Goodware       0.52      0.91      0.66       814
+     Malware       0.73      0.23      0.35       875
+
+    accuracy                           0.56      1689
+   macro avg       0.63      0.57      0.51      1689
+weighted avg       0.63      0.56      0.50      1689
+
+Time taken: 2.19 minutes
