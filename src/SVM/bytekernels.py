@@ -1,19 +1,15 @@
-from typing import Union, Callable, Dict, Iterable, ByteString
-import torch
+from typing import Union, ByteString
 
 BytesLike = Union[bytes, bytearray]
 
-# KERNEL CLASSES
-
-# ---------------------------------------------------------------------------
-# 1) Variable pitch kernel → class
-# ---------------------------------------------------------------------------
+"""
+        Filter 1: Applies a stride pattern to a byte sequence
+        Takes 'keep' bytes, then skips 'skip' bytes, and repeats
+        Returns the filtered bytes
+"""
 class StrideKernel:
     def __init__(self, keep: int, skip: int):
-        """
-        Filtro A: applica uno stride su una sequenza di byte.
-        Ritorna i byte filtrati.
-        """
+
         if keep < 0 or skip < 0:
             raise ValueError("keep and skip must be >= 0")
         self.keep = keep
@@ -31,14 +27,10 @@ class StrideKernel:
     def __call__(self, bytecode: bytes) -> bytes:
         return self.stride_kernel(bytecode)
     
-
-# ---------------------------------------------------------------------------
-# 2) Prime positions kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 2: Keeps only bytes at indices that are prime numbers
+"""
 class PrimeIndexKernel:
-    """
-    Filtro B: mantiene solo i byte negli indici che sono numeri primi.
-    """
 
     @staticmethod
     def _is_prime(n: int) -> bool:
@@ -59,14 +51,11 @@ class PrimeIndexKernel:
     def __call__(self, data: ByteString) -> bytes:
         return self.prime_index_kernel(data)
 
-
-# ---------------------------------------------------------------------------
-# 3) Powers-of-n kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 3: Keeps bytes at positions that are consecutive powers of n
+    For example, with n=2, keeps bytes at positions 1, 4, 9, 16, 25, etc
+"""
 class PowerOfNKernel:
-    """
-    Filtro C: mantiene i byte nelle posizioni che sono potenze successive di n.
-    """
 
     def __init__(self, n: int):
         if n <= 1:
@@ -86,15 +75,11 @@ class PowerOfNKernel:
     def __call__(self, data: ByteString) -> bytes:
         return self.power_of_n_kernel(data)
 
-
-# ---------------------------------------------------------------------------
-# 4) Checkerboard kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 4: Divides the byte stream into blocks of block_size bytes,
+    keeping the first half and discarding the second half (linear checkerboard)
+"""
 class CheckerboardKernel:
-    """
-    Filtro D: divide il flusso in blocchi di block_size byte,
-    tenendo la prima metà e scartando la seconda (scacchiera lineare).
-    """
 
     def __init__(self, block_size: int = 8):
         if not isinstance(block_size, int) or block_size <= 0:
@@ -108,14 +93,12 @@ class CheckerboardKernel:
     def __call__(self, data: ByteString) -> bytes:
         return self.checkerboard_kernel(data)
 
-
-# ---------------------------------------------------------------------------
-# 5) Fibonacci-index kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 5: Keeps bytes at indices that are Fibonacci numbers.
+    This creates a non-uniform sampling pattern that follows the
+    Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, etc.).
+"""
 class FibonacciIndexKernel:
-    """
-    Filtro E: mantiene i byte agli indici della sequenza di Fibonacci.
-    """
 
     @staticmethod
     def _fibs_upto(n: int) -> set[int]:
@@ -133,14 +116,12 @@ class FibonacciIndexKernel:
     def __call__(self, data: ByteString) -> bytes:
         return self.fibonacci_index_kernel(data)
 
-
-# ---------------------------------------------------------------------------
-# 6) Zigzag kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 6: Creates a zigzag pattern by keeping ON_A bytes, skipping OFF_B bytes,
+    then keeping OFF_B bytes, and skipping ON_A bytes.
+    This generates a complex pattern with alternating densities.
+"""
 class ZigZagKernel:
-    """
-    Filtro F: pattern ON_A sì • OFF_B no • OFF_B sì • ON_A no (zig-zag).
-    """
 
     def __init__(self, on_a: int = 4, off_b: int = 2):
         if not isinstance(on_a, int) or not isinstance(off_b, int):
@@ -149,7 +130,7 @@ class ZigZagKernel:
             raise ValueError("on_a and off_b must be positive (>0)")
         self.on_a = on_a
         self.off_b = off_b
-        # Pre-costruisco il pattern per efficienza
+        # Pre-build the pattern for efficiency
         self._pattern = [1] * on_a + [0] * off_b + [1] * off_b + [0] * on_a
         self._m = len(self._pattern)
 
@@ -161,14 +142,11 @@ class ZigZagKernel:
     def __call__(self, data: ByteString) -> bytes:
         return self.zigzag_kernel(data)
 
-
-# ---------------------------------------------------------------------------
-# 7) Block-pos kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 7: From each block of block_size bytes, extracts only the byte
+    at position pos within the block.
+"""
 class BlockPosKernel:
-    """
-    Filtro G: da ogni blocco di length block_size estrae il byte alla posizione pos.
-    """
 
     def __init__(self, block_size: int, pos: int):
         if not isinstance(block_size, int) or block_size <= 0:
@@ -176,24 +154,20 @@ class BlockPosKernel:
         if not isinstance(pos, int):
             raise TypeError("pos must be an integer")
         self.block_size = block_size
-        self.pos = pos % block_size  # normalizzo subito
+        self.pos = pos % block_size  # normalize immediately
 
     def block_pos_kernel(self, data: ByteString) -> bytes:
-        if self.pos >= len(data):   # sequenza troppo corta
+        if self.pos >= len(data):   # sequence too short
             return b""
         return bytes(data[i] for i in range(self.pos, len(data), self.block_size))
 
     def __call__(self, data: ByteString) -> bytes:
         return self.block_pos_kernel(data)
 
-
-# ---------------------------------------------------------------------------
-# 8) Divisible-index kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 8: Keeps bytes whose indices are divisible by mod.
+"""
 class DivisibleIndexKernel:
-    """
-    Filtro H: mantiene i byte i cui indici sono divisibili per mod.
-    """
 
     def __init__(self, mod: int):
         if not isinstance(mod, int):
@@ -209,15 +183,11 @@ class DivisibleIndexKernel:
     def __call__(self, data: ByteString) -> bytes:
         return self.divisible_index_kernel(data)
 
-
-# ---------------------------------------------------------------------------
-# 9) Compressed-spiral kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 9: For each block of size 'block', keeps only bytes at positions
+    0, 1, block-2, and block-1 (compressed spiral pattern)
+"""
 class CompressedSpiralKernel:
-    """
-    Filtro I: in ogni blocco di size block prende solo i byte alle posizioni
-    0, 1, block-2, block-1 (spirale compressa).
-    """
 
     def __init__(self, block: int = 16):
         if not isinstance(block, int):
@@ -236,14 +206,11 @@ class CompressedSpiralKernel:
         return self.compressed_spiral_kernel(data)
 
 
-# ---------------------------------------------------------------------------
-# 10) Tunnel-window kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 10: Returns the first and last third of the bytecode,
+    discarding the middle third (tunnel window pattern)
+"""
 class TunnelWindowKernel:
-    """
-    Filtro J: restituisce il primo e l’ultimo terzo del bytecode,
-    scartando il terzo centrale (finestra a tunnel).
-    """
 
     @staticmethod
     def tunnel_window_kernel(data: ByteString) -> bytes:
@@ -256,14 +223,11 @@ class TunnelWindowKernel:
     def __call__(self, data: ByteString) -> bytes:
         return self.tunnel_window_kernel(data)
 
-# ---------------------------------------------------------------------------
-# 11) Reverse-tunnel-window kernel  →  class
-# ---------------------------------------------------------------------------
+"""
+    Filter 11: Returns only the middle third of the bytecode,
+    discarding the first and last thirds (inverse tunnel window)
+"""
 class ReverseTunnelWindowKernel:
-    """
-    Filtro J: restituisce il secondo terzo del bytecode,
-    scartando il 1° ed il 3° terzo (finestra a tunnel al contrario).
-    """
 
     @staticmethod
     def tunnel_window_kernel(data: ByteString) -> bytes:

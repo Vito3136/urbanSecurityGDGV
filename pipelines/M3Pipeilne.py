@@ -2,10 +2,10 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-# Base path del progetto
+# Base path of the project
 base_path = Path(__file__).resolve().parents[1] / "src" / "SVM"
 
-# Percorsi manuali degli script da eseguire
+# M3 pipeline filters
 scripts = [
     base_path / "1_StrideKernel.py",
     base_path / "2_PrimeIndexKernel.py",
@@ -15,13 +15,13 @@ scripts = [
     base_path / "10_TunnelWindowKernel.py"
 ]
 
-# Crea cartella log con timestamp
+# Create log folder with timestamp
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 file_path = Path(__file__).parent
 log_dir = file_path / timestamp
 log_dir.mkdir(exist_ok=True, parents=True)
 
-# Esegui ogni script e salva l'output
+# Run each script and save the output
 for script in scripts:
     script_path = Path(script)
     log_file = log_dir / f"{script_path.stem}.log"
@@ -30,5 +30,5 @@ for script in scripts:
         subprocess.run(
             ["python", str(script_path)],
             stdout=out,
-            stderr=subprocess.STDOUT  # cattura anche errori
+            stderr=subprocess.STDOUT  # It also catches errors
         )
